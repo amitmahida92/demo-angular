@@ -24,14 +24,14 @@ export class RegisterComponent {
     //   return;
     // }
 
-    this.customerCompositeService.customerRegistration(this.form.value).subscribe((res) => {
-      // this.login();
-    }, (error: any) => {
-      // if (error.status === 409) {
-      //   this.error = 'Customer already exists';
-      //   this.toastr.error('Customer already exists', 'Error');
-      // }
-    });
+    // this.customerCompositeService.customerRegistration(this.form.value).subscribe((res) => {
+    //   this.login();
+    // }, (error: any) => {
+    //   if (error.status === 409) {
+    //     this.error = 'Customer already exists';
+    //     this.toastr.error('Customer already exists', 'Error');
+    //   }
+    // });
   }
 }
 
