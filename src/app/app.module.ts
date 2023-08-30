@@ -12,6 +12,9 @@ import { FooterComponent } from './components/footer/footer.component';
 import { FormsModule } from '@angular/forms';
 import { SelectServiceComponent } from './pages/select-service/select-service.component';
 
+import { ApiModule as CustomerCompositeModule, Configuration as CustomerCompositeConfiguration } from '@savvy/customer-composite';
+import { ConfService } from './config.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +29,12 @@ import { SelectServiceComponent } from './pages/select-service/select-service.co
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    FormsModule
+    FormsModule,
+    CustomerCompositeModule.forRoot(() => {
+      return new CustomerCompositeConfiguration({
+        basePath: ConfService.apiUrl()
+      });
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]

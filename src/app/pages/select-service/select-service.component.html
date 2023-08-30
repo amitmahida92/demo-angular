@@ -1,488 +1,556 @@
 <header class="header">
-        <!-- Fixed navbar -->
-        <nav class="navbar fixed-top">
-            <div class="container-fluid">
-                <a href="index.html" class="navbar-brand" href="#">
-                    <!-- <img src="img/savvy-pet-spa-logo-colored-189.png" alt="" /> -->
-                </a>
-                <div></div>
-                <div>
-                    <a href="javascript:void(0)" class="btn btn-link useremail">john.smith@gmail.com</a>
-                    <a href="signin.html" class="btn btn-default shadow-sm ms-1 ms-md-2">Sign in <i class=" bi bi-arrow-right d-none d-sm-inline"></i></a>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <br>
-    <br>
-    <br>
-    <br>
-
-    <!-- Begin page content -->
-    <main class="main position-relative ">
-        <div class="container z-index-1 mt-3">
-            <div class="row ">
-                <div class="col-12 col-md-12 col-lg-5 col-xl-4 col-xxl-4 pb-4  ">
-                    <!-- title -->
-                    <div class="row align-items-center mb-3 ">
-                        <div class="col">
-                            <h4 class="my-2">Your pets</h4>
-                        </div>
-                        <div class="col-auto">
-                            <button class="btn btn-link" data-bs-toggle="modal" data-bs-target="#addpetmodal">+ Add Pet</button>
-                        </div>
-                    </div>
-                    <!-- title ends -->
-
-                    <!-- Pet list carousel container -->
-                    <div class="swiper petListSwiper mb-3">
-                        <!-- Additional required wrapper -->
-                        <div class="swiper-wrapper">
-                            <!-- Slides -->
-                            <div class="swiper-slide">
-                                <input class="check1 petcheckselect" type="radio" name="petSelection">
-                                <div class="card shadow-sm">
-                                    <div class="card-body">
-                                        <div class="row gx-3">
-                                            <div class="col-12 col-sm mb-3 mb-sm-0">
-                                                <div class="image-pic image-pic-80">
-                                                    <figure class="image-pic-circle">
-                                                        <img src="assets/img/dog-165015.png" alt="" />
-                                                    </figure>
-                                                    <button class="btn btn-sm btn-light image-pic-upload-btn shadow-sm" onclick="document.getElementById('imagepic').click();"><i class="bi bi-camera"></i></button>
-                                                    <input class="image-pick-file" type="file" id="imagepic">
-                                                </div>
-                                            </div>
-                                            <div class="col-12 col-sm-8 col-xxl-9">
-                                                <div class="row my-1">
-                                                    <div class="col">
-                                                        <h5>Maxxy</h5>
-                                                    </div>
-                                                    <div class="col-auto">
-                                                        <h5 class="opacity-50">£00.00</h5>
-                                                    </div>
-                                                </div>
-                                                <p class="text-secondary small mb-2">Bulldog</p>
-                                                <p class="small w-100 text-truncate text-secondary"><span class="icon-18 text-theme me-1"><i class="bi bi-scissors"></i></span> 0 Service</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <input class="check1 petcheckselect" type="radio" name="petSelection" checked>
-                                <div class="card shadow-sm">
-                                    <div class="card-body">
-                                        <div class="row gx-3">
-                                            <div class="col-12 col-sm mb-3 mb-sm-0">
-                                                <div class="image-pic image-pic-80">
-                                                    <figure class="image-pic-circle">
-                                                        <img src="assets/img/pet-2.png" alt="" />
-                                                    </figure>
-                                                    <button class="btn btn-sm btn-light image-pic-upload-btn shadow-sm" onclick="document.getElementById('imagepic').click();"><i class="bi bi-camera"></i></button>
-                                                    <input class="image-pick-file" type="file" id="imagepic">
-                                                </div>
-                                            </div>
-                                            <div class="col-12 col-sm-8 col-xxl-9">
-                                                <div class="row my-1">
-                                                    <div class="col">
-                                                        <h5>Laabu</h5>
-                                                    </div>
-                                                    <div class="col-auto">
-                                                        <h5 class="">£129.90</h5>
-                                                    </div>
-                                                </div>
-                                                <p class="text-secondary small mb-2">Labrador </p>
-                                                <p class="small w-100 text-truncate mb-1">
-                                                    <span class="icon-18 text-theme me-1"><i class="bi bi-scissors"></i></span>
-                                                    Full Grooming <span class="text-secondary">|</span> 1 hr <span class="text-secondary">|</span> £60 + £4.95 <span class="text-secondary">(Tax)</span>
-                                                </p>
-                                                <p class="small w-100 text-truncate mb-1">
-                                                    <span class="icon-18 text-theme me-1"><i class="bi bi-scissors"></i></span>
-                                                    Nail Spa + Hair Cutting <span class="text-secondary">|</span> 30 min <span class="text-secondary">|</span> £60 + £4.95 <span class="text-secondary">(Tax)</span>
-                                                </p>
-                                                <p class="small w-100 text-truncate mb-0">
-                                                    <span class="icon-18 text-theme me-1"><i class="bi bi-calendar-event"></i></span>
-                                                    23 March 2023 <span class="text-secondary">at</span> 12:00pm <span class="text-secondary">by</span> <a href="">Harry</a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <input class="check1 petcheckselect" type="radio" name="petSelection">
-                                <div class="card shadow-sm">
-                                    <div class="card-body">
-                                        <div class="row gx-3">
-                                            <div class="col-12 col-sm mb-3 mb-sm-0">
-                                                <div class="image-pic image-pic-80">
-                                                    <figure class="image-pic-circle">
-                                                        <img src="assets/img/pet-3.png" alt="" />
-                                                    </figure>
-                                                    <button class="btn btn-sm btn-light image-pic-upload-btn shadow-sm" onclick="document.getElementById('imagepic').click();"><i class="bi bi-camera"></i></button>
-                                                    <input class="image-pick-file" type="file" id="imagepic">
-                                                </div>
-                                            </div>
-                                            <div class="col-12 col-sm-8 col-xxl-9">
-                                                <div class="row my-1">
-                                                    <div class="col">
-                                                        <h5>Navi</h5>
-                                                    </div>
-                                                    <div class="col-auto">
-                                                        <h5 class="">£64.95</h5>
-                                                    </div>
-                                                </div>
-                                                <p class="text-secondary small mb-2">Labrador </p>
-                                                <p class="small w-100 text-truncate mb-1">
-                                                    <span class="icon-18 text-theme me-1"><i class="bi bi-scissors"></i></span>
-                                                    Full Grooming <span class="text-secondary">|</span> 1 hr <span class="text-secondary">|</span> £60 + £4.95 <span class="text-secondary">(Tax)</span>
-                                                </p>
-                                                <p class="small w-100 text-truncate mb-0">
-                                                    <span class="icon-18 text-theme me-1"><i class="bi bi-calendar-event"></i></span>
-                                                    23 March 2023 <span class="text-secondary">at</span> 12:00pm <span class="text-secondary">by</span> <a href="">Harry</a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row align-items-center">
-                        <div class="col-auto">
-                            <div class="circle-border-64"><i class="bi bi-credit-card"></i></div>
-                        </div>
-                        <div class="col">
-                            <h5 class="mb-0">£180.00</h5>
-                            <p class="text-secondary">Sub-total</p>
-                        </div>
-                        <div class="col border-left-dashed">
-                            <h5 class="mb-0">£14.85</h5>
-                            <p class="text-secondary">Tax</p>
-                        </div>
-                        <div class="col border-left-dashed ">
-                            <h5 class="mb-0">£194.85</h5>
-                            <p class="text-secondary">Total</p>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-12 col-md-12 col-lg-7 col-xl-8 col-xxl-8 mb-5 mb-lg-0">
-                    <!-- title -->
-                    <div class="row align-items-center mb-3">
-                        <div class="col">
-                            <h4 class="my-2">Select service for <span class="text-theme">Laabu</span></h4>
-                        </div>
-                        <div class="col-auto">
-                            <div class="input-group">
-                                <span class="input-group-text" id="searchservice"><i class="bi bi-search"></i></span>
-                                <input type="search" class="form-control " id="searchservice" placeholder="Search Service">
-                            </div>
-                        </div>
-                    </div>
-                    <!-- title ends -->
-
-                    <div class="accordion mb-4" id="accordionExample">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingOne">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    <span class="h5 my-0">Service group 1</span>
-                                </button>
-                            </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <div class="row">
-
-                                        <!-- col-service -->
-                                        <div class="col-12 col-md-12 col-lg-6">
-                                            <div class="card border-0 shadow-sm mb-3 mb-lg-0">
-                                                <div class="card-body">
-                                                    <div class="row gx-3">
-                                                        <div class="col-auto">
-                                                            <div class="form-check form-check-lg">
-                                                                <input class="form-check-input" type="checkbox" value="" id="services-1" checked>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col">
-                                                            <h5 class="mb-2">Full Grooming</h5>
-                                                            <p class="text-secondary small mb-2">Bath With Shampoo & Conditioner Blow Dry Nail Clipping Ear Cleaning Eyes Cleaning Paw Mass...</p>
-                                                            <div class="row">
-                                                                <div class="col-auto">
-                                                                    <p class=""><span class="text-secondary">Duration:</span> 1 hr</p>
-                                                                </div>
-                                                                <div class="col-auto">
-                                                                    <p class=""><span class="text-secondary">Price:</span> £60 <span class="text-secondary">+</span> £4.95 <span class="text-secondary">(Tax)</span></p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- col-service ends -->
-
-
-                                        <!-- col-service -->
-                                        <div class="col-12 col-md-12 col-lg-6">
-                                            <div class="card border-0 shadow-sm mb-3 mb-lg-0">
-                                                <div class="card-body">
-                                                    <div class="row gx-3">
-                                                        <div class="col-auto">
-                                                            <div class="form-check form-check-lg">
-                                                                <input class="form-check-input" type="checkbox" value="" id="services-2">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col">
-                                                            <h5 class="mb-2">Full Grooming</h5>
-                                                            <p class="text-secondary small mb-2">Bath With Shampoo & Conditioner Blow Dry Nail Clipping Ear Cleaning Eyes Cleaning Paw Mass...</p>
-                                                            <div class="row">
-                                                                <div class="col-auto">
-                                                                    <p class=""><span class="text-secondary">Duration:</span> 1 hr</p>
-                                                                </div>
-                                                                <div class="col-auto">
-                                                                    <p class=""><span class="text-secondary">Price:</span> £60 <span class="text-secondary">+</span> £4.95 <span class="text-secondary">(Tax)</span></p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- col-service ends -->
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item">
-                            <h2 class="accordion-header " id="headingTwo">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    <span class="h5 my-0">Service group 2</span>
-                                </button>
-                            </h2>
-                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <div class="row">
-
-                                        <!-- col-service -->
-                                        <div class="col-12 col-md-12 col-lg-6">
-                                            <div class="card border-0 shadow-sm mb-3 mb-lg-0">
-                                                <div class="card-body">
-                                                    <div class="row gx-3">
-                                                        <div class="col-auto">
-                                                            <div class="form-check form-check-lg">
-                                                                <input class="form-check-input" type="checkbox" value="" id="services-1" checked>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col">
-                                                            <h5 class="mb-2">Full Grooming</h5>
-                                                            <p class="text-secondary small mb-2">Bath With Shampoo & Conditioner Blow Dry Nail Clipping Ear Cleaning Eyes Cleaning Paw Mass...</p>
-                                                            <div class="row">
-                                                                <div class="col-auto">
-                                                                    <p class=""><span class="text-secondary">Duration:</span> 1 hr</p>
-                                                                </div>
-                                                                <div class="col-auto">
-                                                                    <p class=""><span class="text-secondary">Price:</span> £60 <span class="text-secondary">+</span> £4.95 <span class="text-secondary">(Tax)</span></p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- col-service ends -->
-
-
-                                        <!-- col-service -->
-                                        <div class="col-12 col-md-12 col-lg-6">
-                                            <div class="card border-0 shadow-sm mb-3 mb-lg-0">
-                                                <div class="card-body">
-                                                    <div class="row gx-3">
-                                                        <div class="col-auto">
-                                                            <div class="form-check form-check-lg">
-                                                                <input class="form-check-input" type="checkbox" value="" id="services-2">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col">
-                                                            <h5 class="mb-2">Full Grooming</h5>
-                                                            <p class="text-secondary small mb-2">Bath With Shampoo & Conditioner Blow Dry Nail Clipping Ear Cleaning Eyes Cleaning Paw Mass...</p>
-                                                            <div class="row">
-                                                                <div class="col-auto">
-                                                                    <p class=""><span class="text-secondary">Duration:</span> 1 hr</p>
-                                                                </div>
-                                                                <div class="col-auto">
-                                                                    <p class=""><span class="text-secondary">Price:</span> £60 <span class="text-secondary">+</span> £4.95 <span class="text-secondary">(Tax)</span></p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- col-service ends -->
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="text-center mb-3">
-                        <h4>Would you like to add on any special <b>Add-On</b> to your appointment?</h4>
-                    </div>
-
-                    <div class="row mb-3">
-
-                        <!-- col add-on service -->
-                        <div class="col-12 col-md-12 col-lg-6">
-                            <div class="card border-0 shadow-sm mb-3 mb-lg-0">
-                                <div class="card-body">
-                                    <div class="row gx-3">
-                                        <div class="col-auto">
-                                            <div class="form-check form-check-lg">
-                                                <input class="form-check-input" type="checkbox" value="" id="addon-1">
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <h5 class="mb-2">Full Grooming</h5>
-                                            <p class="text-secondary small mb-2">Bath With Shampoo & Conditioner Blow Dry Nail Clipping Ear Cleaning Eyes Cleaning Paw Mass...</p>
-                                            <div class="row">
-                                                <div class="col-auto">
-                                                    <p class=""><span class="text-secondary">Duration:</span> 1 hr</p>
-                                                </div>
-                                                <div class="col-auto">
-                                                    <p class=""><span class="text-secondary">Price:</span> £60 <span class="text-secondary">+</span> £4.95 <span class="text-secondary">(Tax)</span></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- col add-on service ends -->
-
-
-                        <!-- col add-on service -->
-                        <div class="col-12 col-md-12 col-lg-6">
-                            <div class="card border-0 shadow-sm mb-3 mb-lg-0">
-                                <div class="card-body">
-                                    <div class="row gx-3">
-                                        <div class="col-auto">
-                                            <div class="form-check form-check-lg">
-                                                <input class="form-check-input" type="checkbox" value="" id="addon-2">
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <h5 class="mb-2">Full Grooming</h5>
-                                            <p class="text-secondary small mb-2">Bath With Shampoo & Conditioner Blow Dry Nail Clipping Ear Cleaning Eyes Cleaning Paw Mass...</p>
-                                            <div class="row">
-                                                <div class="col-auto">
-                                                    <p class=""><span class="text-secondary">Duration:</span> 1 hr</p>
-                                                </div>
-                                                <div class="col-auto">
-                                                    <p class=""><span class="text-secondary">Price:</span> £60 <span class="text-secondary">+</span> £4.95 <span class="text-secondary">(Tax)</span></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- col add-on service ends -->
-
-                    </div>
-
-                    <!-- buttons container -->
-                    <div class="row mb-3">
-                        <div class="col">
-
-                            <!-- if comes from guest booking , show previous button with guest login page link -->
-                            <!-- if comes from logged-in user , add history back on previous button -->
-                            <button class="btn btn-light shadow-sm">
-                                <i class="bi bi-arrow-left"></i> Previous
-                            </button>
-                        </div>
-                        <div class="col-auto">
-                            <!-- <button class="btn btn-default">
-                                Next <i class="bi bi-arrow-right"></i>
-                            </button> -->
-                            <a href="select-schedules.html" class="btn btn-default">
-                                Next <i class="bi bi-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- buttons container -->
-                </div>
+    <!-- Fixed navbar -->
+    <nav class="navbar fixed-top">
+        <div class="container-fluid">
+            <a href="index.html" class="navbar-brand" href="#">
+                <!-- <img src="img/savvy-pet-spa-logo-colored-189.png" alt="" /> -->
+            </a>
+            <div></div>
+            <div>
+                <a href="javascript:void(0)" class="btn btn-link useremail">john.smith@gmail.com</a>
+                <a href="signin.html" class="btn btn-default shadow-sm ms-1 ms-md-2">Sign in <i
+                        class=" bi bi-arrow-right d-none d-sm-inline"></i></a>
             </div>
         </div>
+    </nav>
+</header>
 
-    </main>
-
-
-    <!-- add pet modal -->
-    <div class="modal fade" id="addpetmodal" tabindex="-1" aria-labelledby="addpetmodalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-sm">
-            <div class="modal-content">
-                <div class="modal-header border-0">
-                    <h1 class="modal-title fs-5" id="addpetmodalLabel">Add Pet</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="image-pic pt-3 pt-sm-0">
-                        <figure class="image-pic-circle small">
-                            <img src="assets/img/dog-165015.png" alt="" />
-                        </figure>
-                        <button class="btn btn-light image-pic-upload-btn shadow" onclick="document.getElementById('imagepic').click();"><i class="bi bi-camera"></i></button>
-                        <input class="image-pick-file" type="file" id="imagepic">
+<!-- Begin page content -->
+<main class="main position-relative ">
+    <div class="container z-index-1 mt-3">
+        <div class="row ">
+            <div class="col-12 col-md-12 col-lg-5 col-xl-4 col-xxl-4 pb-4  ">
+                <!-- title -->
+                <div class="row align-items-center mb-3 ">
+                    <div class="col">
+                        <h4 class="my-2">Your pets</h4>
                     </div>
-                    <h5 class="text-center my-4">What is the pet's name?</h5>
-                    <div class="row ">
-                        <div class="col-12  mb-3">
-                            <div class="form-floating">
-                                <input type="text" class="form-control" id="petname" placeholder="Pet Name">
-                                <label for="petname">Pet Name</label>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="form-floating">
-                                <select class="form-select" id="breedSelect" aria-label="Select Pet Breed">
-                                    <option>Your Pet Breed</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
-                                </select>
-                                <label for="breedSelect">Select Pet Breed</label>
-                            </div>
-                        </div>
+                    <div class="col-auto">
+                        <button class="btn btn-link" data-bs-toggle="modal" data-bs-target="#addpetmodal">+ Add
+                            Pet</button>
                     </div>
                 </div>
-                <div class="modal-footer justify-content-center border-0">
-                    <button type="button" class="btn btn-default">Submit <i class="bi bi-arrow-right"></i></button>
+                <!-- title ends -->
+
+                <!-- Pet list carousel container -->
+                <div class="swiper petListSwiper mb-3">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <input class="check1 petcheckselect" type="radio" name="petSelection">
+                            <div class="card shadow-sm">
+                                <div class="card-body">
+                                    <div class="row gx-3">
+                                        <div class="col-12 col-sm mb-3 mb-sm-0">
+                                            <div class="image-pic image-pic-80">
+                                                <figure class="image-pic-circle">
+                                                    <img src="assets/img/dog-165015.png" alt="" />
+                                                </figure>
+                                                <button class="btn btn-sm btn-light image-pic-upload-btn shadow-sm"
+                                                    onclick="document.getElementById('imagepic').click();"><i
+                                                        class="bi bi-camera"></i></button>
+                                                <input class="image-pick-file" type="file" id="imagepic">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-8 col-xxl-9">
+                                            <div class="row my-1">
+                                                <div class="col">
+                                                    <h5>Maxxy</h5>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <h5 class="opacity-50">£00.00</h5>
+                                                </div>
+                                            </div>
+                                            <p class="text-secondary small mb-2">Bulldog</p>
+                                            <p class="small w-100 text-truncate text-secondary"><span
+                                                    class="icon-18 text-theme me-1"><i
+                                                        class="bi bi-scissors"></i></span> 0 Service</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <input class="check1 petcheckselect" type="radio" name="petSelection" checked>
+                            <div class="card shadow-sm">
+                                <div class="card-body">
+                                    <div class="row gx-3">
+                                        <div class="col-12 col-sm mb-3 mb-sm-0">
+                                            <div class="image-pic image-pic-80">
+                                                <figure class="image-pic-circle">
+                                                    <img src="assets/img/pet-2.png" alt="" />
+                                                </figure>
+                                                <button class="btn btn-sm btn-light image-pic-upload-btn shadow-sm"
+                                                    onclick="document.getElementById('imagepic').click();"><i
+                                                        class="bi bi-camera"></i></button>
+                                                <input class="image-pick-file" type="file" id="imagepic">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-8 col-xxl-9">
+                                            <div class="row my-1">
+                                                <div class="col">
+                                                    <h5>Laabu</h5>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <h5 class="">£129.90</h5>
+                                                </div>
+                                            </div>
+                                            <p class="text-secondary small mb-2">Labrador </p>
+                                            <p class="small w-100 text-truncate mb-1">
+                                                <span class="icon-18 text-theme me-1"><i
+                                                        class="bi bi-scissors"></i></span>
+                                                Full Grooming <span class="text-secondary">|</span> 1 hr <span
+                                                    class="text-secondary">|</span> £60 + £4.95 <span
+                                                    class="text-secondary">(Tax)</span>
+                                            </p>
+                                            <p class="small w-100 text-truncate mb-1">
+                                                <span class="icon-18 text-theme me-1"><i
+                                                        class="bi bi-scissors"></i></span>
+                                                Nail Spa + Hair Cutting <span class="text-secondary">|</span> 30 min
+                                                <span class="text-secondary">|</span> £60 + £4.95 <span
+                                                    class="text-secondary">(Tax)</span>
+                                            </p>
+                                            <p class="small w-100 text-truncate mb-0">
+                                                <span class="icon-18 text-theme me-1"><i
+                                                        class="bi bi-calendar-event"></i></span>
+                                                23 March 2023 <span class="text-secondary">at</span> 12:00pm <span
+                                                    class="text-secondary">by</span> <a href="">Harry</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <input class="check1 petcheckselect" type="radio" name="petSelection">
+                            <div class="card shadow-sm">
+                                <div class="card-body">
+                                    <div class="row gx-3">
+                                        <div class="col-12 col-sm mb-3 mb-sm-0">
+                                            <div class="image-pic image-pic-80">
+                                                <figure class="image-pic-circle">
+                                                    <img src="assets/img/pet-3.png" alt="" />
+                                                </figure>
+                                                <button class="btn btn-sm btn-light image-pic-upload-btn shadow-sm"
+                                                    onclick="document.getElementById('imagepic').click();"><i
+                                                        class="bi bi-camera"></i></button>
+                                                <input class="image-pick-file" type="file" id="imagepic">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-8 col-xxl-9">
+                                            <div class="row my-1">
+                                                <div class="col">
+                                                    <h5>Navi</h5>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <h5 class="">£64.95</h5>
+                                                </div>
+                                            </div>
+                                            <p class="text-secondary small mb-2">Labrador </p>
+                                            <p class="small w-100 text-truncate mb-1">
+                                                <span class="icon-18 text-theme me-1"><i
+                                                        class="bi bi-scissors"></i></span>
+                                                Full Grooming <span class="text-secondary">|</span> 1 hr <span
+                                                    class="text-secondary">|</span> £60 + £4.95 <span
+                                                    class="text-secondary">(Tax)</span>
+                                            </p>
+                                            <p class="small w-100 text-truncate mb-0">
+                                                <span class="icon-18 text-theme me-1"><i
+                                                        class="bi bi-calendar-event"></i></span>
+                                                23 March 2023 <span class="text-secondary">at</span> 12:00pm <span
+                                                    class="text-secondary">by</span> <a href="">Harry</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
+                <div class="row align-items-center">
+                    <div class="col-auto">
+                        <div class="circle-border-64"><i class="bi bi-credit-card"></i></div>
+                    </div>
+                    <div class="col">
+                        <h5 class="mb-0">£180.00</h5>
+                        <p class="text-secondary">Sub-total</p>
+                    </div>
+                    <div class="col border-left-dashed">
+                        <h5 class="mb-0">£14.85</h5>
+                        <p class="text-secondary">Tax</p>
+                    </div>
+                    <div class="col border-left-dashed ">
+                        <h5 class="mb-0">£194.85</h5>
+                        <p class="text-secondary">Total</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-12 col-md-12 col-lg-7 col-xl-8 col-xxl-8 mb-5 mb-lg-0">
+                <!-- title -->
+                <div class="row align-items-center mb-3">
+                    <div class="col">
+                        <h4 class="my-2">Select service for <span class="text-theme">Laabu</span></h4>
+                    </div>
+                    <div class="col-auto">
+                        <div class="input-group">
+                            <span class="input-group-text" id="searchservice"><i class="bi bi-search"></i></span>
+                            <input type="search" class="form-control " id="searchservice" placeholder="Search Service">
+                        </div>
+                    </div>
+                </div>
+                <!-- title ends -->
+
+                <div class="accordion mb-4" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <span class="h5 my-0">Service group 1</span>
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <div class="row">
+
+                                    <!-- col-service -->
+                                    <div class="col-12 col-md-12 col-lg-6">
+                                        <div class="card border-0 shadow-sm mb-3 mb-lg-0">
+                                            <div class="card-body">
+                                                <div class="row gx-3">
+                                                    <div class="col-auto">
+                                                        <div class="form-check form-check-lg">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="services-1" checked>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <h5 class="mb-2">Full Grooming</h5>
+                                                        <p class="text-secondary small mb-2">Bath With Shampoo &
+                                                            Conditioner Blow Dry Nail Clipping Ear Cleaning Eyes
+                                                            Cleaning Paw Mass...</p>
+                                                        <div class="row">
+                                                            <div class="col-auto">
+                                                                <p class=""><span
+                                                                        class="text-secondary">Duration:</span> 1 hr</p>
+                                                            </div>
+                                                            <div class="col-auto">
+                                                                <p class=""><span class="text-secondary">Price:</span>
+                                                                    £60 <span class="text-secondary">+</span> £4.95
+                                                                    <span class="text-secondary">(Tax)</span>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- col-service ends -->
+
+
+                                    <!-- col-service -->
+                                    <div class="col-12 col-md-12 col-lg-6">
+                                        <div class="card border-0 shadow-sm mb-3 mb-lg-0">
+                                            <div class="card-body">
+                                                <div class="row gx-3">
+                                                    <div class="col-auto">
+                                                        <div class="form-check form-check-lg">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="services-2">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <h5 class="mb-2">Full Grooming</h5>
+                                                        <p class="text-secondary small mb-2">Bath With Shampoo &
+                                                            Conditioner Blow Dry Nail Clipping Ear Cleaning Eyes
+                                                            Cleaning Paw Mass...</p>
+                                                        <div class="row">
+                                                            <div class="col-auto">
+                                                                <p class=""><span
+                                                                        class="text-secondary">Duration:</span> 1 hr</p>
+                                                            </div>
+                                                            <div class="col-auto">
+                                                                <p class=""><span class="text-secondary">Price:</span>
+                                                                    £60 <span class="text-secondary">+</span> £4.95
+                                                                    <span class="text-secondary">(Tax)</span>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- col-service ends -->
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header " id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <span class="h5 my-0">Service group 2</span>
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <div class="row">
+
+                                    <!-- col-service -->
+                                    <div class="col-12 col-md-12 col-lg-6">
+                                        <div class="card border-0 shadow-sm mb-3 mb-lg-0">
+                                            <div class="card-body">
+                                                <div class="row gx-3">
+                                                    <div class="col-auto">
+                                                        <div class="form-check form-check-lg">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="services-1" checked>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <h5 class="mb-2">Full Grooming</h5>
+                                                        <p class="text-secondary small mb-2">Bath With Shampoo &
+                                                            Conditioner Blow Dry Nail Clipping Ear Cleaning Eyes
+                                                            Cleaning Paw Mass...</p>
+                                                        <div class="row">
+                                                            <div class="col-auto">
+                                                                <p class=""><span
+                                                                        class="text-secondary">Duration:</span> 1 hr</p>
+                                                            </div>
+                                                            <div class="col-auto">
+                                                                <p class=""><span class="text-secondary">Price:</span>
+                                                                    £60 <span class="text-secondary">+</span> £4.95
+                                                                    <span class="text-secondary">(Tax)</span>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- col-service ends -->
+
+
+                                    <!-- col-service -->
+                                    <div class="col-12 col-md-12 col-lg-6">
+                                        <div class="card border-0 shadow-sm mb-3 mb-lg-0">
+                                            <div class="card-body">
+                                                <div class="row gx-3">
+                                                    <div class="col-auto">
+                                                        <div class="form-check form-check-lg">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="services-2">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <h5 class="mb-2">Full Grooming</h5>
+                                                        <p class="text-secondary small mb-2">Bath With Shampoo &
+                                                            Conditioner Blow Dry Nail Clipping Ear Cleaning Eyes
+                                                            Cleaning Paw Mass...</p>
+                                                        <div class="row">
+                                                            <div class="col-auto">
+                                                                <p class=""><span
+                                                                        class="text-secondary">Duration:</span> 1 hr</p>
+                                                            </div>
+                                                            <div class="col-auto">
+                                                                <p class=""><span class="text-secondary">Price:</span>
+                                                                    £60 <span class="text-secondary">+</span> £4.95
+                                                                    <span class="text-secondary">(Tax)</span>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- col-service ends -->
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="text-center mb-3">
+                    <h4>Would you like to add on any special <b>Add-On</b> to your appointment?</h4>
+                </div>
+
+                <div class="row mb-3">
+
+                    <!-- col add-on service -->
+                    <div class="col-12 col-md-12 col-lg-6">
+                        <div class="card border-0 shadow-sm mb-3 mb-lg-0">
+                            <div class="card-body">
+                                <div class="row gx-3">
+                                    <div class="col-auto">
+                                        <div class="form-check form-check-lg">
+                                            <input class="form-check-input" type="checkbox" value="" id="addon-1">
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <h5 class="mb-2">Full Grooming</h5>
+                                        <p class="text-secondary small mb-2">Bath With Shampoo & Conditioner Blow Dry
+                                            Nail Clipping Ear Cleaning Eyes Cleaning Paw Mass...</p>
+                                        <div class="row">
+                                            <div class="col-auto">
+                                                <p class=""><span class="text-secondary">Duration:</span> 1 hr</p>
+                                            </div>
+                                            <div class="col-auto">
+                                                <p class=""><span class="text-secondary">Price:</span> £60 <span
+                                                        class="text-secondary">+</span> £4.95 <span
+                                                        class="text-secondary">(Tax)</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- col add-on service ends -->
+
+
+                    <!-- col add-on service -->
+                    <div class="col-12 col-md-12 col-lg-6">
+                        <div class="card border-0 shadow-sm mb-3 mb-lg-0">
+                            <div class="card-body">
+                                <div class="row gx-3">
+                                    <div class="col-auto">
+                                        <div class="form-check form-check-lg">
+                                            <input class="form-check-input" type="checkbox" value="" id="addon-2">
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <h5 class="mb-2">Full Grooming</h5>
+                                        <p class="text-secondary small mb-2">Bath With Shampoo & Conditioner Blow Dry
+                                            Nail Clipping Ear Cleaning Eyes Cleaning Paw Mass...</p>
+                                        <div class="row">
+                                            <div class="col-auto">
+                                                <p class=""><span class="text-secondary">Duration:</span> 1 hr</p>
+                                            </div>
+                                            <div class="col-auto">
+                                                <p class=""><span class="text-secondary">Price:</span> £60 <span
+                                                        class="text-secondary">+</span> £4.95 <span
+                                                        class="text-secondary">(Tax)</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- col add-on service ends -->
+
+                </div>
+
+                <!-- buttons container -->
+                <div class="row mb-3">
+                    <div class="col">
+
+                        <!-- if comes from guest booking , show previous button with guest login page link -->
+                        <!-- if comes from logged-in user , add history back on previous button -->
+                        <button class="btn btn-light shadow-sm">
+                            <i class="bi bi-arrow-left"></i> Previous
+                        </button>
+                    </div>
+                    <div class="col-auto">
+                        <!-- <button class="btn btn-default">
+                                Next <i class="bi bi-arrow-right"></i>
+                            </button> -->
+                        <a href="select-schedules.html" class="btn btn-default">
+                            Next <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- buttons container -->
             </div>
         </div>
     </div>
-    <!-- add pet modal ends -->
+
+</main>
 
 
-    <!-- script starts here -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<!-- add pet modal -->
+<div class="modal fade" id="addpetmodal" tabindex="-1" aria-labelledby="addpetmodalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
+        <div class="modal-content">
+            <div class="modal-header border-0">
+                <h1 class="modal-title fs-5" id="addpetmodalLabel">Add Pet</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="image-pic pt-3 pt-sm-0">
+                    <figure class="image-pic-circle small">
+                        <img src="assets/img/dog-165015.png" alt="" />
+                    </figure>
+                    <button class="btn btn-light image-pic-upload-btn shadow"
+                        onclick="document.getElementById('imagepic').click();"><i class="bi bi-camera"></i></button>
+                    <input class="image-pick-file" type="file" id="imagepic">
+                </div>
+                <h5 class="text-center my-4">What is the pet's name?</h5>
+                <div class="row ">
+                    <div class="col-12  mb-3">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="petname" placeholder="Pet Name">
+                            <label for="petname">Pet Name</label>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-floating">
+                            <select class="form-select" id="breedSelect" aria-label="Select Pet Breed">
+                                <option>Your Pet Breed</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                            <label for="breedSelect">Select Pet Breed</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer justify-content-center border-0">
+                <button type="button" class="btn btn-default">Submit <i class="bi bi-arrow-right"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- add pet modal ends -->
 
-    <!-- swiper js -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
-    <!-- custom js -->
-    <script src="js/main.js"></script>
+<!-- script starts here -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script> -->
 
-    <!-- page level js -->
-    <script>
+<!-- swiper js -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script> -->
+
+<!-- custom js -->
+<!-- <script src="js/main.js"></script> -->
+
+<!-- page level js -->
+<!-- <script>
+    if (window.innerWidth < 991) {
+        const mySwiper = new Swiper('.petListSwiper', {
+            slidesPerView: "auto",
+            spaceBetween: 20,
+        });
+    } else {
+        const mySwiper = new Swiper('.petListSwiper', {});
+        mySwiper.destroy();
+    }
+
+    window.addEventListener('resize', function (event) {
         if (window.innerWidth < 991) {
             const mySwiper = new Swiper('.petListSwiper', {
                 slidesPerView: "auto",
@@ -493,18 +561,7 @@
             mySwiper.destroy();
         }
 
-        window.addEventListener('resize', function (event) {
-            if (window.innerWidth < 991) {
-                const mySwiper = new Swiper('.petListSwiper', {
-                    slidesPerView: "auto",
-                    spaceBetween: 20,
-                });
-            } else {
-                const mySwiper = new Swiper('.petListSwiper', {});
-                mySwiper.destroy();
-            }
-
-        }, true);
+    }, true);
 
 
-    </script>
+</script> -->

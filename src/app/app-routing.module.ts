@@ -7,25 +7,25 @@ import { SelectServiceComponent } from './pages/select-service/select-service.co
 
 const routes: Routes = [
   {
-    path:'',
+    path: '',
     redirectTo: 'register',
     pathMatch: 'full',
   },
   {
-    path:'home',
-    component:HomeComponent
+    path: 'home',
+    component: HomeComponent
   },
   {
-    path:'login',
-    component:LoginComponent
+    path: 'login',
+    component: LoginComponent
   },
   {
-    path:'register',
-    component:RegisterComponent
+    path: 'register',
+    component: RegisterComponent
   },
   {
-    path:'select-service',
-    component:SelectServiceComponent
+    path: 'select-service',
+    component: SelectServiceComponent
   }
 ];
 

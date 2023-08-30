@@ -1,9 +1,9 @@
 {
   "name": "my-first-app",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --configuration local",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
@@ -20,6 +20,7 @@
     "@angular/router": "^16.2.0",
     "@ng-bootstrap/ng-bootstrap": "^15.1.1",
     "@popperjs/core": "^2.11.6",
+    "@savvy/customer-composite": "^8.0.47",
     "bootstrap": "^5.2.3",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
@@ -31,6 +32,7 @@
     "@angular/compiler-cli": "^16.2.0",
     "@angular/localize": "^16.2.0",
     "@types/jasmine": "~4.3.0",
+    "@types/node": "^20.5.7",
     "jasmine-core": "~4.6.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
