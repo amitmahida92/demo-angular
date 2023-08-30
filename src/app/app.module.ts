@@ -14,6 +14,7 @@ import { SelectServiceComponent } from './pages/select-service/select-service.co
 
 import { ApiModule as CustomerCompositeModule, Configuration as CustomerCompositeConfiguration } from '@savvy/customer-composite';
 import { ConfService } from './config.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { ConfService } from './config.service';
     AppRoutingModule,
     NgbModule,
     FormsModule,
+    HttpClientModule,
     CustomerCompositeModule.forRoot(() => {
       return new CustomerCompositeConfiguration({
         basePath: ConfService.apiUrl()
