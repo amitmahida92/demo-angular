@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from './pages/home/home.component';
-import { LoginComponent } from './pages/login/login.component';
+import { SigninComponent } from './pages/signin/signin.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -15,17 +15,20 @@ import { SelectServiceComponent } from './pages/select-service/select-service.co
 import { ApiModule as CustomerCompositeModule, Configuration as CustomerCompositeConfiguration } from '@savvy/customer-composite';
 import { ConfService } from './config.service';
 import { HttpClientModule } from '@angular/common/http';
+import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    LoginComponent,
+    SigninComponent,
     RegisterComponent,
     HeaderComponent,
     FooterComponent,
     SelectServiceComponent,
+    ForgotPasswordComponent,
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,

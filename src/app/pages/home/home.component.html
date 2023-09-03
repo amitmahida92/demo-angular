@@ -1,3 +1,16 @@
+<header class="header">
+  <nav class="navbar fixed-top">
+      <div class="container-fluid">
+        <a href="index.html" class="navbar-brand" href="#"><img src="assets/img/savvy-pet-spa-logo-colored-189.png" alt="">
+      </a>
+  <div>
+      <a routerLink="/" class="btn btn-light shadow-sm">Join us <span class="d-none d-sm-inline">now</span></a>
+      <a routerLink="/signin" class="btn btn-default shadow-sm ms-1 ms-md-2">Sign in <i class=" bi bi-arrow-right d-none d-sm-inline"></i></a>
+    </div>
+    </div>
+  </nav>
+</header>
+
 <main class="main position-relative ">
   <div class="container container-vh z-index-1">
       <div class="row align-items-center h-100">
@@ -43,14 +56,14 @@
                               <label for="floatingInput">Email address</label>
                           </div>
                           <div class="valid-feedback text-success">
-                              Email is already register with us. <a href="signin.html" class="fw-bold text-success">Sign in</a> to continue.
+                              Email is already register with us. <a routerLink="/signin" class="fw-bold text-success">Sign in</a> to continue.
                           </div>
                       </div>
 
                       <p class="text-center my-4">
-                          <a href="select-service.html" class="btn btn-lg btn-default shadow-sm ms-1 ms-md-2">Start scheduling <i class=" bi bi-arrow-right"></i></a>
+                          <a routerLink="/select-service" class="btn btn-lg btn-default shadow-sm ms-1 ms-md-2">Start scheduling <i class=" bi bi-arrow-right"></i></a>
                       </p>
-                      <p class="text-secondary text-center px-3 px-md-4">If you are already our customer, retrieve pet list by <a href="signin.html">Sign in</a> here.</p>
+                      <p class="text-secondary text-center px-3 px-md-4">If you are already our customer, retrieve pet list by <a routerLink="/signin">Sign in</a> here.</p>
                   </div>
               </div>
           </div>
@@ -67,3 +80,4 @@
   </div>
   <!-- logins background start ends -->
 </main>
+
