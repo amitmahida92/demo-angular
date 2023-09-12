@@ -16,6 +16,8 @@ import { ApiModule as CustomerCompositeModule, Configuration as CustomerComposit
 import { ConfService } from './config.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
+import { ResetPasswordComponent } from './pages/reset-password/reset-password.component';
+import { SelectSchedulesComponent } from './pages/select-schedules/select-schedules.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,8 @@ import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password
     FooterComponent,
     SelectServiceComponent,
     ForgotPasswordComponent,
+    ResetPasswordComponent,
+    SelectSchedulesComponent,
   ],
 
   imports: [

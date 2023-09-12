@@ -5,6 +5,8 @@ import { SigninComponent } from './pages/signin/signin.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { SelectServiceComponent } from './pages/select-service/select-service.component';
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
+import { ResetPasswordComponent } from './pages/reset-password/reset-password.component';
+import { SelectSchedulesComponent } from './pages/select-schedules/select-schedules.component';
 
 const routes: Routes = [
   {
@@ -25,12 +27,20 @@ const routes: Routes = [
     component: RegisterComponent
   },
   {
+    path: 'select-service',
+    component: SelectServiceComponent
+  },
+  {
+    path: 'select-schedules',
+    component: SelectSchedulesComponent
+  },
+  {
     path: 'forgot-password',
     component: ForgotPasswordComponent
   },
   {
-    path: 'select-service',
-    component: SelectServiceComponent
+    path: 'reset-password',
+    component: ResetPasswordComponent
   }
 ];
 

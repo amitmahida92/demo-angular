@@ -1,0 +1,585 @@
+<body class="d-flex flex-column">
+
+    <header class="header">
+        <!-- Fixed navbar -->
+        <nav class="navbar fixed-top">
+            <div class="container-fluid">
+                <a href="index.html" class="navbar-brand" href="#">
+                    <img src="assets/img/savvy-pet-spa-logo-colored-189.png" alt="" />
+                </a>
+                <div></div>
+                <div>
+                    <a href="javascript:void(0)" class="btn btn-link useremail">john.smith@gmail.com</a>
+                    <a href="signin.html" class="btn btn-default shadow-sm ms-1 ms-md-2">Sign in <i class=" bi bi-arrow-right d-none d-sm-inline"></i></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Begin page content -->
+    <main class="main position-relative ">
+        <div class="container z-index-1 mt-3">
+            <div class="row ">
+                <div class="col-12 col-md-12 col-lg-5 col-xl-4 col-xxl-4 pb-4  ">
+                    <!-- title -->
+                    <div class="row align-items-center mb-3 ">
+                        <div class="col">
+                            <h4 class="my-2">Your pets</h4>
+                        </div>
+                        <div class="col-auto">
+                            <button class="btn btn-link" data-bs-toggle="modal" data-bs-target="#addpetmodal">+ Add Pet</button>
+                        </div>
+                    </div>
+                    <!-- title ends -->
+
+                    <!-- Pet list carousel container -->
+                    <div class="swiper petListSwiper mb-3">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide">
+                                <input class="check1 petcheckselect" type="radio" name="petSelection">
+                                <div class="card shadow-sm">
+                                    <div class="card-body">
+                                        <div class="row gx-3">
+                                            <div class="col-12 col-sm mb-3 mb-sm-0">
+                                                <div class="image-pic image-pic-80">
+                                                    <figure class="image-pic-circle">
+                                                        <img src="assets/img/dog-165015.png" alt="" />
+                                                    </figure>
+                                                    <button class="btn btn-sm btn-light image-pic-upload-btn shadow-sm" onclick="document.getElementById('imagepic').click();"><i class="bi bi-camera"></i></button>
+                                                    <input class="image-pick-file" type="file" id="imagepic">
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-sm-8 col-xxl-9">
+                                                <div class="row my-1">
+                                                    <div class="col">
+                                                        <h5>Maxxy</h5>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <h5 class="opacity-50">£00.00</h5>
+                                                    </div>
+                                                </div>
+                                                <p class="text-secondary small mb-2">Bulldog</p>
+                                                <p class="small w-100 text-truncate text-secondary"><span class="icon-18 text-theme me-1"><i class="bi bi-scissors"></i></span> 0 Service</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <input class="check1 petcheckselect" type="radio" name="petSelection" checked>
+                                <div class="card shadow-sm">
+                                    <div class="card-body">
+                                        <div class="row gx-3">
+                                            <div class="col-12 col-sm mb-3 mb-sm-0">
+                                                <div class="image-pic image-pic-80">
+                                                    <figure class="image-pic-circle">
+                                                        <img src="assets/img/pet-2.png" alt="" />
+                                                    </figure>
+                                                    <button class="btn btn-sm btn-light image-pic-upload-btn shadow-sm" onclick="document.getElementById('imagepic').click();"><i class="bi bi-camera"></i></button>
+                                                    <input class="image-pick-file" type="file" id="imagepic">
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-sm-8 col-xxl-9">
+                                                <div class="row my-1">
+                                                    <div class="col">
+                                                        <h5>Laabu</h5>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <h5 class="">£129.90</h5>
+                                                    </div>
+                                                </div>
+                                                <p class="text-secondary small mb-2">Labrador </p>
+                                                <p class="small w-100 text-truncate mb-1">
+                                                    <span class="icon-18 text-theme me-1"><i class="bi bi-scissors"></i></span>
+                                                    Full Grooming <span class="text-secondary">|</span> 1 hr <span class="text-secondary">|</span> £60 + £4.95 <span class="text-secondary">(Tax)</span>
+                                                </p>
+                                                <p class="small w-100 text-truncate mb-1">
+                                                    <span class="icon-18 text-theme me-1"><i class="bi bi-scissors"></i></span>
+                                                    Nail Spa + Hair Cutting <span class="text-secondary">|</span> 30 min <span class="text-secondary">|</span> £60 + £4.95 <span class="text-secondary">(Tax)</span>
+                                                </p>
+                                                <p class="small w-100 text-truncate mb-0">
+                                                    <span class="icon-18 text-theme me-1"><i class="bi bi-calendar-event"></i></span>
+                                                    23 March 2023 <span class="text-secondary">at</span> 12:00pm <span class="text-secondary">by</span> <a href="">Harry</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <input class="check1 petcheckselect" type="radio" name="petSelection">
+                                <div class="card shadow-sm">
+                                    <div class="card-body">
+                                        <div class="row gx-3">
+                                            <div class="col-12 col-sm mb-3 mb-sm-0">
+                                                <div class="image-pic image-pic-80">
+                                                    <figure class="image-pic-circle">
+                                                        <img src="assets/img/pet-3.png" alt="" />
+                                                    </figure>
+                                                    <button class="btn btn-sm btn-light image-pic-upload-btn shadow-sm" onclick="document.getElementById('imagepic').click();"><i class="bi bi-camera"></i></button>
+                                                    <input class="image-pick-file" type="file" id="imagepic">
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-sm-8 col-xxl-9">
+                                                <div class="row my-1">
+                                                    <div class="col">
+                                                        <h5>Navi</h5>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <h5 class="">£64.95</h5>
+                                                    </div>
+                                                </div>
+                                                <p class="text-secondary small mb-2">Labrador </p>
+                                                <p class="small w-100 text-truncate mb-1">
+                                                    <span class="icon-18 text-theme me-1"><i class="bi bi-scissors"></i></span>
+                                                    Full Grooming <span class="text-secondary">|</span> 1 hr <span class="text-secondary">|</span> £60 + £4.95 <span class="text-secondary">(Tax)</span>
+                                                </p>
+                                                <p class="small w-100 text-truncate mb-0">
+                                                    <span class="icon-18 text-theme me-1"><i class="bi bi-calendar-event"></i></span>
+                                                    23 March 2023 <span class="text-secondary">at</span> 12:00pm <span class="text-secondary">by</span> <a href="">Harry</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row align-items-center">
+                        <div class="col-auto">
+                            <div class="circle-border-64"><i class="bi bi-credit-card"></i></div>
+                        </div>
+                        <div class="col">
+                            <h5 class="mb-0">£180.00</h5>
+                            <p class="text-secondary">Sub-total</p>
+                        </div>
+                        <div class="col border-left-dashed">
+                            <h5 class="mb-0">£14.85</h5>
+                            <p class="text-secondary">Tax</p>
+                        </div>
+                        <div class="col border-left-dashed ">
+                            <h5 class="mb-0">£194.85</h5>
+                            <p class="text-secondary">Total</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-12 col-md-12 col-lg-7 col-xl-8 col-xxl-8 mb-5 mb-lg-0">
+                    <!-- title -->
+                    <div class="row align-items-center mb-3">
+                        <div class="col">
+                            <h4 class="my-2">Select groomer & schedule for <span class="text-theme">Laabu</span></h4>
+                        </div>
+                        <div class="col-auto">
+                            <select class="form-select" id="searchservice">
+                                <option>Location 1</option>
+                                <option>Location 2</option>
+                                <option>Location 3</option>
+                                <option>Location 4</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- title ends -->
+
+                    <!-- groomer list carousel container -->
+                    <div class="swiper groomerListSwiper mb-3">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide">
+                                <input class="check1 petcheckselect" type="radio" name="groomerSelection" checked>
+                                <div class="card text-center">
+                                    <div class="card-body">
+                                        <div class="image-pic image-pic-80 mb-2">
+                                            <figure class="image-pic-circle">
+                                                <img src="assets/img/user-pic.png" alt="" />
+                                            </figure>
+                                        </div>
+                                        <p class="mb-0 text-truncate">Any</p>
+                                        <p class="mb-0 small text-secondary">Groomer</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <input class="check1 petcheckselect" type="radio" name="groomerSelection">
+                                <div class="card text-center">
+                                    <div class="card-body">
+                                        <div class="image-pic image-pic-80 mb-2">
+                                            <figure class="image-pic-circle">
+                                                <img src="assets/img/user-1.jpg" alt="" />
+                                            </figure>
+                                        </div>
+                                        <p class="mb-0 text-truncate">Harry</p>
+                                        <p class="mb-0 small text-secondary">Nail Spa</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <input class="check1 petcheckselect" type="radio" name="groomerSelection">
+                                <div class="card text-center">
+                                    <div class="card-body">
+                                        <div class="image-pic image-pic-80 mb-2">
+                                            <figure class="image-pic-circle">
+                                                <img src="assets/img/user-2.jpg" alt="" />
+                                            </figure>
+                                        </div>
+                                        <p class="mb-0 text-truncate">Samantha</p>
+                                        <p class="mb-0 small text-secondary">Groomer</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <input class="check1 petcheckselect" type="radio" name="groomerSelection">
+                                <div class="card text-center">
+                                    <div class="card-body">
+                                        <div class="image-pic image-pic-80 mb-2">
+                                            <figure class="image-pic-circle">
+                                                <img src="assets/img/user-3.jpg" alt="" />
+                                            </figure>
+                                        </div>
+                                        <p class="mb-0 text-truncate">Nicky</p>
+                                        <p class="mb-0 small text-secondary">Hair Spa</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <input class="check1 petcheckselect" type="radio" name="groomerSelection">
+                                <div class="card text-center">
+                                    <div class="card-body">
+                                        <div class="image-pic image-pic-80 mb-2">
+                                            <figure class="image-pic-circle">
+                                                <img src="assets/img/user-4.jpg" alt="" />
+                                            </figure>
+                                        </div>
+                                        <p class="mb-0 text-truncate">John</p>
+                                        <p class="mb-0 small text-secondary">Groomer</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- groomer list carousel container ends -->
+
+                    <!-- calendar schedules -->
+                    <div class="row mb-4">
+                        <div class="col-12 col-md-6 col-xl-5 col-xxl-4 mb-4 mb-md-0">
+                            <input class="" id="datepickerinline">
+                            <div class="datepickerinline"></div>
+                        </div>
+                        <div class="col-12 col-md-6 col-xl-7 col-xxl-8">
+                            <h4 id="selecteddate">23 March 2023</h4>
+                            <p class="text-secondary mb-3">Select timing for your appointment</p>
+
+                            <!-- date slots -->
+                            <div class="row gx-3">
+                                <div class="col-6 col-md-6 col-xl-4 col-xxl-3">
+                                    <div class="card border-0 shadow-sm mb-3">
+                                        <div class="card-body p-2">
+                                            <div class="form-check form-check-lg mb-0">
+                                                <input class="form-check-input timeslot" type="radio" name="timeslotradio" value="" id="timeslot-1">
+                                                <label for="timeslot-1" class="py-1 ps-2">09:30 AM</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-6 col-xl-4 col-xxl-3">
+                                    <div class="card border-0 shadow-sm mb-3">
+                                        <div class="card-body p-2">
+                                            <div class="form-check form-check-lg mb-0">
+                                                <input class="form-check-input timeslot" type="radio" name="timeslotradio" value="" id="timeslot-2">
+                                                <label for="timeslot-2" class="py-1 ps-2">10:00 AM</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-6 col-xl-4 col-xxl-3">
+                                    <div class="card border-0 shadow-sm mb-3">
+                                        <div class="card-body p-2">
+                                            <div class="form-check form-check-lg mb-0">
+                                                <input class="form-check-input timeslot" type="radio" name="timeslotradio" value="" id="timeslot-3">
+                                                <label for="timeslot-3" class="py-1 ps-2">10:30 AM</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-6 col-xl-4 col-xxl-3">
+                                    <div class="card border-0 shadow-sm mb-3">
+                                        <div class="card-body p-2">
+                                            <div class="form-check form-check-lg mb-0">
+                                                <input class="form-check-input timeslot" type="radio" name="timeslotradio" value="" id="timeslot-4">
+                                                <label for="timeslot-4" class="py-1 ps-2">11:00 AM</label>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-6 col-xl-4 col-xxl-3">
+                                    <div class="card border-0 shadow-sm mb-3">
+                                        <div class="card-body p-2">
+                                            <div class="form-check form-check-lg mb-0">
+                                                <input class="form-check-input timeslot" type="radio" name="timeslotradio" value="" id="timeslot-5">
+                                                <label for="timeslot-5" class="py-1 ps-2">11:30 AM</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-6 col-xl-4 col-xxl-3">
+                                    <div class="card border-0 shadow-sm mb-3">
+                                        <div class="card-body p-2">
+                                            <div class="form-check form-check-lg mb-0">
+                                                <input class="form-check-input timeslot" type="radio" name="timeslotradio" value="" id="timeslot-6">
+                                                <label for="timeslot-6" class="py-1 ps-2">12:00 PM</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-6 col-xl-4 col-xxl-3">
+                                    <div class="card border-0 shadow-sm mb-3">
+                                        <div class="card-body p-2">
+                                            <div class="form-check form-check-lg mb-0">
+                                                <input class="form-check-input timeslot" type="radio" name="timeslotradio" value="" id="timeslot-7">
+                                                <label for="timeslot-7" class="py-1 ps-2">12:30 PM</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-6 col-xl-4 col-xxl-3">
+                                    <div class="card border-0 shadow-sm mb-3">
+                                        <div class="card-body p-2">
+                                            <div class="form-check form-check-lg mb-0">
+                                                <input class="form-check-input timeslot" type="radio" name="timeslotradio" value="" id="timeslot-8">
+                                                <label for="timeslot-8" class="py-1 ps-2">01:00 PM</label>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-6 col-xl-4 col-xxl-3">
+                                    <div class="card border-0 shadow-sm mb-3">
+                                        <div class="card-body p-2">
+                                            <div class="form-check form-check-lg mb-0">
+                                                <input class="form-check-input timeslot" type="radio" name="timeslotradio" value="" id="timeslot-9">
+                                                <label for="timeslot-9" class="py-1 ps-2">01:30 PM</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-6 col-xl-4 col-xxl-3">
+                                    <div class="card border-0 shadow-sm mb-3">
+                                        <div class="card-body p-2">
+                                            <div class="form-check form-check-lg mb-0">
+                                                <input class="form-check-input timeslot" type="radio" name="timeslotradio" value="" id="timeslot-10">
+                                                <label for="timeslot-10" class="py-1 ps-2">02:00 PM</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-6 col-xl-4 col-xxl-3">
+                                    <div class="card border-0 shadow-sm mb-3">
+                                        <div class="card-body p-2">
+                                            <div class="form-check form-check-lg mb-0">
+                                                <input class="form-check-input timeslot" type="radio" name="timeslotradio" value="" id="timeslot-11">
+                                                <label for="timeslot-11" class="py-1 ps-2">02:30 PM</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-6 col-xl-4 col-xxl-3">
+                                    <div class="card border-0 shadow-sm mb-3">
+                                        <div class="card-body p-2">
+                                            <div class="form-check form-check-lg mb-0">
+                                                <input class="form-check-input timeslot" type="radio" name="timeslotradio" value="" id="timeslot-12">
+                                                <label for="timeslot-12" class="py-1 ps-2">03:00 PM</label>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- date slots ends -->
+                        </div>
+                    </div>
+                    <!-- calendar schedules ends-->
+
+                    <!-- buttons container -->
+                    <div class="row mb-3">
+                        <div class="col">
+                            <button class="btn btn-light shadow-sm" onclick="history.back()">
+                                <i class="bi bi-arrow-left"></i> Previous
+                            </button>
+                        </div>
+                        <div class="col-auto">
+                            <a href="booking-confirmation.html" class="btn btn-default">
+                                Next <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- buttons container -->
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="footer mt-auto py-3">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-auto">
+                    <p class="small text-secondary">v 2.0.1</p>
+                </div>
+                <div class="col-auto ms-auto">
+                    <p>
+                        <span class="text-muted"><small class="text-secondary">Powered by</small> <a href="https://itsallsavvy.com" class="savvylogo-footer ms-1"><img src="img/savvy-pet-spa-logo-colored-189.png" alt=""></a></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- add pet modal -->
+    <div class="modal fade" id="addpetmodal" tabindex="-1" aria-labelledby="addpetmodalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h1 class="modal-title fs-5" id="addpetmodalLabel">Add Pet</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="image-pic pt-3 pt-sm-0">
+                        <figure class="image-pic-circle small">
+                            <img src="img/dog-165015.png" alt="" />
+                        </figure>
+                        <button class="btn btn-light image-pic-upload-btn shadow" onclick="document.getElementById('imagepic').click();"><i class="bi bi-camera"></i></button>
+                        <input class="image-pick-file" type="file" id="imagepic">
+                    </div>
+                    <h5 class="text-center my-4">What is the pet's name?</h5>
+                    <div class="row ">
+                        <div class="col-12  mb-3">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="petname" placeholder="Pet Name">
+                                <label for="petname">Pet Name</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-floating">
+                                <select class="form-select" id="breedSelect" aria-label="Select Pet Breed">
+                                    <option>Your Pet Breed</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                                <label for="breedSelect">Select Pet Breed</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-center border-0">
+                    <button type="button" class="btn btn-default">Submit <i class="bi bi-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- add pet modal ends -->
+
+    <!-- script starts here -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- swiper js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!-- date range picker -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+    <!-- custom js -->
+    <script src="js/main.js"></script>
+
+    <!-- page level js -->
+    <script>
+        /* Groomer selection swiper */
+        const myGroomerSwiper = new Swiper('.groomerListSwiper', {
+            slidesPerView: "auto",
+            spaceBetween: 10,
+        });
+
+        /* left pet selection swiper */
+        if (window.innerWidth < 991) {
+            const mySwiper = new Swiper('.petListSwiper', {
+                slidesPerView: "auto",
+                spaceBetween: 20,
+            });
+        } else {
+            const mySwiper = new Swiper('.petListSwiper', {});
+            mySwiper.destroy();
+        }
+
+        window.addEventListener('resize', function (event) {
+            if (window.innerWidth < 991) {
+                const mySwiper = new Swiper('.petListSwiper', {
+                    slidesPerView: "auto",
+                    spaceBetween: 20,
+                });
+            } else {
+                const mySwiper = new Swiper('.petListSwiper', {});
+                mySwiper.destroy();
+            }
+
+        }, true);
+
+        /* Timeslot selection */
+        const timeslots = document.getElementsByClassName('timeslot');
+
+        document.querySelectorAll('.timeslot').forEach(function () {
+
+        });
+
+        document.querySelectorAll('.timeslot').forEach(item => {
+            item.addEventListener('change', event => {
+
+                document.querySelectorAll('.timeslot').forEach(items => {
+                    items.closest('.card').classList.remove('selected');
+                });
+
+                if (item.checked === true) {
+                    item.closest('.card').classList.add('selected')
+                } else {
+                    item.closest('.card').classList.remove('selected')
+                }
+            })
+        })
+
+
+
+
+        /* date picker */
+        $('#datepickerinline').daterangepicker({
+            "singleDatePicker": true,
+            "autoApply": true,
+            "isInvalidDate": function (date) {
+                if (date.day() == 0 || date.day() == 1 || date.day() == 2 || date.day() == 3 || date.day() == 4 || date.day() == 5)
+                    return false;
+                return true;
+            },
+            "showCustomRangeLabel": false,
+            "parentEl": '.datepickerinline',
+            "alwaysShowCalendars": true,
+            "buttonClasses": "btn",
+            "applyButtonClasses": "btn-default",
+            "cancelClass": "btn-light"
+        }, function (start, end, label) {
+            //console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
+            document.getElementById('selecteddate').innerHTML = end.format('DD MMMM YYYY');
+
+        });
+        $('#datepickerinline').click();
+
+    </script>
+</body>
