@@ -7,6 +7,7 @@ import { SelectServiceComponent } from './pages/select-service/select-service.co
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
 import { ResetPasswordComponent } from './pages/reset-password/reset-password.component';
 import { SelectSchedulesComponent } from './pages/select-schedules/select-schedules.component';
+import { BookingConfirmationComponent } from './pages/booking-confirmation/booking-confirmation.component';
 
 const routes: Routes = [
   {
@@ -41,6 +42,10 @@ const routes: Routes = [
   {
     path: 'reset-password',
     component: ResetPasswordComponent
+  },
+  {
+    path: 'booking-confirmation',
+    component: BookingConfirmationComponent
   }
 ];
 

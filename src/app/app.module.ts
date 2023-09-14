@@ -18,6 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
 import { ResetPasswordComponent } from './pages/reset-password/reset-password.component';
 import { SelectSchedulesComponent } from './pages/select-schedules/select-schedules.component';
+import { BookingConfirmationComponent } from './pages/booking-confirmation/booking-confirmation.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { SelectSchedulesComponent } from './pages/select-schedules/select-schedu
     ForgotPasswordComponent,
     ResetPasswordComponent,
     SelectSchedulesComponent,
+    BookingConfirmationComponent,
   ],
 
   imports: [
