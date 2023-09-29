@@ -8,6 +8,8 @@ import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password
 import { ResetPasswordComponent } from './pages/reset-password/reset-password.component';
 import { SelectSchedulesComponent } from './pages/select-schedules/select-schedules.component';
 import { BookingConfirmationComponent } from './pages/booking-confirmation/booking-confirmation.component';
+import { DialogComponent } from './pages/dialog/dialog.component';
+
 
 const routes: Routes = [
   {
@@ -30,6 +32,10 @@ const routes: Routes = [
   {
     path: 'select-service',
     component: SelectServiceComponent
+  },
+  {
+    path: 'dialog',
+    component: DialogComponent
   },
   {
     path: 'select-schedules',

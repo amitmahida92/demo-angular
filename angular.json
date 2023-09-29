@@ -5,7 +5,7 @@
   "projects": {
     "my-first-app": {
       "projectType": "application",
-       "schematics": {
+      "schematics": {
         "@schematics/angular:component": {
           "prefix": "app",
           "style": "scss"
@@ -38,7 +38,9 @@
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/swiper/swiper-bundle.min.js"
+            ]
           },
           "configurations": {
             "production": {

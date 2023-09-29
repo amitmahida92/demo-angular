@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
@@ -6,14 +8,19 @@ import { AuthService } from 'src/app/services/auth.service';
   templateUrl: './forgot-password.component.html',
   styleUrls: ['./forgot-password.component.scss']
 })
-export class ForgotPasswordComponent implements OnInit {
+export class ForgotPasswordComponent {
 
 email : string = '';
 
-constructor(private auth : AuthService) { }
+  constructor(private http: HttpClient) {}
 
-ngOnInit(): void {
-}
+  onSubmit() {
+    this.http.post('/api/reset-password', { email: this.email })
+      .subscribe(
+        (response: any) => {
 
+        },
 
+      );
+  }
 }

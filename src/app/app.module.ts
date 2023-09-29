@@ -19,6 +19,8 @@ import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password
 import { ResetPasswordComponent } from './pages/reset-password/reset-password.component';
 import { SelectSchedulesComponent } from './pages/select-schedules/select-schedules.component';
 import { BookingConfirmationComponent } from './pages/booking-confirmation/booking-confirmation.component';
+import { DialogComponent } from './pages/dialog/dialog.component';
+
 
 @NgModule({
   declarations: [
@@ -33,6 +35,7 @@ import { BookingConfirmationComponent } from './pages/booking-confirmation/booki
     ResetPasswordComponent,
     SelectSchedulesComponent,
     BookingConfirmationComponent,
+    DialogComponent
   ],
 
   imports: [
