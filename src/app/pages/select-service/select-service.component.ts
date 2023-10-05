@@ -51,4 +51,12 @@ export class SelectServiceComponent implements OnInit {
 
 }
 
+isPreviousButtonActive: boolean = false;
+
+  activatePreviousButton() {
+    this.isPreviousButtonActive = true;
+
+}
+
+
 }

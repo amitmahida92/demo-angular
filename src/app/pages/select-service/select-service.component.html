@@ -14,7 +14,9 @@
     </div>
   </nav>
 </header>
-
+<br>
+<br>
+<br>
 
 <!-- Begin page content -->
 <main class="main position-relative ">
@@ -27,10 +29,50 @@
             <h4 class="my-2">Your pets</h4>
           </div>
           <div class="col-auto">
-            <button class="btn btn-link" data-bs-toggle="modal" data-bs-target="#addpetmodal" onclick="openDialog()">+
-              Add
-              Pet</button>
-
+            <button class="btn btn-link" data-bs-toggle="modal" data-bs-target="#addpetmodal" onclick="openDialog()">+Add Pet</button>
+            <div class="modal fade" id="addpetmodal" tabindex="-1" aria-labelledby="addpetmodalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered modal-sm">
+                <div class="modal-content">
+                  <div class="modal-header border-0">
+                    <h1 class="modal-title fs-5" id="addpetmodalLabel">Add Pet</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="image-pic pt-3 pt-sm-0">
+                      <figure class="image-pic-circle small">
+                        <img src="assets/img/dog-165015.png" alt="" />
+                      </figure>
+                      <button class="btn btn-light image-pic-upload-btn shadow"
+                        onclick="document.getElementById('imagepic').click();"><i class="bi bi-camera"></i></button>
+                      <input class="image-pick-file" type="file" id="imagepic">
+                    </div>
+                    <h5 class="text-center my-4">What is the pet's name?</h5>
+                    <div class="row ">
+                      <div class="col-12  mb-3">
+                        <div class="form-floating">
+                          <input type="text" class="form-control" id="petname" placeholder="Pet Name">
+                          <label for="petname">Pet Name</label>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="form-floating">
+                          <select class="form-select" id="breedSelect" aria-label="Select Pet Breed">
+                            <option>Your Pet Breed</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                          <label for="breedSelect">Select Pet Breed</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer justify-content-center border-0">
+                    <button type="button" class="btn btn-default">Submit <i class="bi bi-arrow-right"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <!-- title ends -->
@@ -441,19 +483,16 @@
 
             <!-- if comes from guest booking , show previous button with guest login page link -->
             <!-- if comes from logged-in user , add history back on previous button -->
-            <button class="btn btn-light shadow-sm">
-              <i class="bi bi-arrow-left"></i> Previous
-            </button>
+            <a routerLink="/home" class="btn btn-light shadow-sm" (click)="activatePreviousButton()">Previous
+              <i class="bi bi-arrow-left"></i></a>
           </div>
           <div class="col-auto">
             <!-- <button class="btn btn-default">
                                 Next <i class="bi bi-arrow-right"></i>
                             </button> -->
-            <a routerLink="/select-schedules" class="btn btn-default" (click)="activateNextButton()">Next <i
-                class="bi bi-arrow-right"></i></a>
+            <a routerLink="/select-schedules" class="btn btn-default" (click)="activateNextButton()">Next
+              <i class="bi bi-arrow-right"></i></a>
           </div>
-
-
         </div>
         <!-- buttons container -->
       </div>

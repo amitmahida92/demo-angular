@@ -20,6 +20,7 @@ import { ResetPasswordComponent } from './pages/reset-password/reset-password.co
 import { SelectSchedulesComponent } from './pages/select-schedules/select-schedules.component';
 import { BookingConfirmationComponent } from './pages/booking-confirmation/booking-confirmation.component';
 import { DialogComponent } from './pages/dialog/dialog.component';
+import { AddPetComponent } from './pages/add-pet/add-pet.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { DialogComponent } from './pages/dialog/dialog.component';
     ResetPasswordComponent,
     SelectSchedulesComponent,
     BookingConfirmationComponent,
-    DialogComponent
+    DialogComponent,
+    AddPetComponent
   ],
 
   imports: [
