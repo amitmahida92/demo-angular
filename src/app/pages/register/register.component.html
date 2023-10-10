@@ -1,95 +1,96 @@
 <body class="d-flex flex-column">
-<header class="header">
-  <nav class="navbar fixed-top">
+  <header class="header">
+    <nav class="navbar fixed-top">
       <div class="container-fluid">
-        <a href="index.html" class="navbar-brand" href="#"><img src="assets/img/savvy-pet-spa-logo-colored-189.png" alt="">
-      </a>
-  <div>
-      <a routerLink="/" class="btn btn-light shadow-sm">Join us <span class="d-none d-sm-inline">now</span></a>
-      <a routerLink="/signin" class="btn btn-default shadow-sm ms-1 ms-md-2">Sign in <i class=" bi bi-arrow-right d-none d-sm-inline"></i></a>
-    </div>
-    </div>
-  </nav>
-</header>
+        <a href="index.html" class="navbar-brand" href="#"><img src="assets/img/savvy-pet-spa-logo-colored-189.png"
+            alt="">
+        </a>
+        <div>
+          <a routerLink="/" class="btn btn-light shadow-sm">Join us <span class="d-none d-sm-inline">now</span></a>
+          <a routerLink="/signin" class="btn btn-default shadow-sm ms-1 ms-md-2">Sign in <i
+              class=" bi bi-arrow-right d-none d-sm-inline"></i></a>
+        </div>
+      </div>
+    </nav>
+  </header>
 
-<main class="main position-relative ">
+  <main class="main position-relative ">
     <div class="container container-vh z-index-1">
-        <div class="row align-items-center h-100">
-            <div class="col-12 col-md-12 col-lg-5 col-xl-5 col-xxl-4 pb-4 pt-5 pt-md-0 order-2 order-lg-1">
-                <h1 class="mb-4">Easy scheduling with<br>Easy online booking</h1>
-                <p class="lead text-secondary mb-4">Your pets are in great hands with a us. Plus, your booking is backed
-                    by 24/7 support. We will send you a confirmation with timing and reminder at the time of
-                    appointment.</p>
+      <div class="row align-items-center h-100">
+        <div class="col-12 col-md-12 col-lg-5 col-xl-5 col-xxl-4 pb-4 pt-5 pt-md-0 order-2 order-lg-1">
+          <h1 class="mb-4">Easy scheduling with<br>Easy online booking</h1>
+          <p class="lead text-secondary mb-4">Your pets are in great hands with a us. Plus, your booking is backed
+            by 24/7 support. We will send you a confirmation with timing and reminder at the time of
+            appointment.</p>
 
-                <a href="#" class="btn btn-lg btn-light shadow-sm">Become our Customer <i
-                        class="bi bi-arrow-right"></i></a>
-            </div>
-            <div
-                class="col-12 col-md-12 col-lg-5 col-xl-5 col-xxl-5 offset-lg-2 offset-xl-2 offset-xxl-3 order-1 order-lg-2 mb-5 mb-lg-0">
-                <div class="row justify-content-center">
-                    <div class="col-12 col-sm-9 col-md-11 col-xl-9 col-xxl-8 ">
-                        <h4 class="text-center mb-4">Create New account</h4>
-                        <div class="row ">
-                            <div class="col-12 col-sm-6 mb-3">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="firstname" placeholder="First Name"
-                                        [(ngModel)]="firstName">
-                                    <label for="firstname">First Name</label>
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-6 mb-3">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="lastname" placeholder="Last Name"
-                                        [(ngModel)]="lastName">
-                                    <label for="lastname">Last Name</label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="mb-3">
-                            <div class="form-floating is-valid">
-                                <input type="email" class="form-control is-valid" id="floatingInput"
-                                    placeholder="Email Address" value="" [(ngModel)]="email">
-                                <label for="floatingInput">Email address</label>
-                            </div>
-
-                        </div>
-                        <div class="mb-3">
-                            <div class="input-group ">
-                                <div class="form-floating">
-                                    <input type="password" class="form-control" id="floatingInputpassword"
-                                        placeholder="Password" [(ngModel)]="password">
-                                    <label for="floatingInputpassword">Password</label>
-                                </div>
-                                <span class="input-group-text bg-white"><i class="bi bi-eye-slash"></i></span>
-                                <div class="invalid-feedback">
-                                    Enter password with atlease 1 alpha
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-
-                            <p class="text-center my-4">
-                                <a class="btn btn-lg btn-default shadow-sm ms-1 ms-md-2" (click)="register()">Register <i
-                                        class="bi bi-arrow-right"></i></a>
-                            </p>
-                            <p class="text-secondary text-center px-3 px-md-4">Already have account?
-                                <a href="javascript:void(0)" [routerLink]="['/routePath']"
-                                    routerLinkActive="router-link-active">Sign In</a> now
-                            </p>
-                        </div>
-                    </div>
+          <a routerLink="/select-service" class="btn btn-lg btn-light shadow-sm">Become our Customer <i class="bi bi-arrow-right"></i></a>
+        </div>
+        <div
+          class="col-12 col-md-12 col-lg-5 col-xl-5 col-xxl-5 offset-lg-2 offset-xl-2 offset-xxl-3 order-1 order-lg-2 mb-5 mb-lg-0">
+          <div class="row justify-content-center">
+            <div class="col-12 col-sm-9 col-md-11 col-xl-9 col-xxl-8 ">
+              <h4 class="text-center mb-4">Create New account</h4>
+              <div class="row ">
+                <div class="col-12 col-sm-6 mb-3">
+                  <div class="form-floating">
+                    <input type="text" class="form-control" id="firstname" placeholder="First Name"
+                      [(ngModel)]="firstName">
+                    <label for="firstname">First Name</label>
+                  </div>
                 </div>
-            </div>
-        </div>
+                <div class="col-12 col-sm-6 mb-3">
+                  <div class="form-floating">
+                    <input type="text" class="form-control" id="lastname" placeholder="Last Name"
+                      [(ngModel)]="lastName">
+                    <label for="lastname">Last Name</label>
+                  </div>
+                </div>
+              </div>
 
-        <div class="img-pet">
-            <div class="circle-0-large"></div>
-            <div class="circle-1"></div>
-            <div class="circle-2"></div>
-            <img src="assets\img\bottom-pet.png" class="pet-image" alt="" />
+              <div class="mb-3">
+                <div class="form-floating is-valid">
+                  <input type="email" class="form-control is-valid" id="floatingInput" placeholder="Email Address"
+                    value="" [(ngModel)]="email">
+                  <label for="floatingInput">Email address</label>
+                </div>
+
+              </div>
+              <div class="mb-3">
+                <div class="input-group ">
+                  <div class="form-floating">
+                    <input type="password" class="form-control" id="floatingInputpassword" placeholder="Password"
+                      [(ngModel)]="password">
+                    <label for="floatingInputpassword">Password</label>
+                  </div>
+                  <span class="input-group-text bg-white"><i class="bi bi-eye-slash"></i></span>
+                  <div class="invalid-feedback">
+                    Enter password with atlease 1 alpha
+                  </div>
+                </div>
+              </div>
+              <div>
+
+                <p class="text-center my-4">
+                  <a class="btn btn-lg btn-default shadow-sm ms-1 ms-md-2" (click)="register()">Register <i
+                      class="bi bi-arrow-right"></i></a>
+                </p>
+                <p class="text-secondary text-center px-3 px-md-4">Already have account?
+                  <a href="javascript:void(0)" [routerLink]="['/routePath']" routerLinkActive="router-link-active">Sign
+                    In</a> now
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+
+      <div class="img-pet">
+        <div class="circle-0-large"></div>
+        <div class="circle-1"></div>
+        <div class="circle-2"></div>
+        <img src="assets\img\bottom-pet.png" class="pet-image" alt="" />
+      </div>
     </div>
-</main>
-<app-footer></app-footer>
+  </main>
+  <app-footer></app-footer>
 </body>

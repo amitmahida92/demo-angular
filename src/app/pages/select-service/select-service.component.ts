@@ -14,10 +14,6 @@ export class SelectServiceComponent implements OnInit {
     this.isDialogOpen = true;
   }
 
-  closeDialog() {
-    this.isDialogOpen = false;
-  }
-
   ngOnInit() {
 
     if (window.innerWidth < 991) {
