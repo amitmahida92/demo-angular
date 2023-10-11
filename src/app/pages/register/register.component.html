@@ -17,13 +17,15 @@
           <div class="row ">
             <div class="col-12 col-sm-6 mb-3">
               <div class="form-floating">
-                <input type="text" class="form-control" id="firstname" placeholder="First Name" [(ngModel)]="firstName">
+                <input type="text" class="form-control" id="firstname" placeholder="First Name" [(ngModel)]="firstName" required>
+                [isFormSubmitted]="isFormSubmitted">
                 <label for="firstname">First Name</label>
               </div>
             </div>
             <div class="col-12 col-sm-6 mb-3">
               <div class="form-floating">
-                <input type="text" class="form-control" id="lastname" placeholder="Last Name" [(ngModel)]="lastName">
+                <input type="text" class="form-control" id="lastname" placeholder="Last Name" [(ngModel)]="lastName" required>
+                [isFormSubmitted]="isFormSubmitted">
                 <label for="lastname">Last Name</label>
               </div>
             </div>

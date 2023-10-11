@@ -8,21 +8,21 @@ import { Component, OnInit } from '@angular/core';
 export class SigninComponent implements OnInit {
   signinUsers: any[] = [];
   signinObj: any = {
-
-  email: '',
-  password: ''
-
+    email: '',
+    password: ''
   };
 
   constructor() { }
 
-  signin(email: string, password: string){
-
-  }
-
   ngOnInit(): void {
 
   }
+
+  onSignIn(){
+    this.signinUsers.push(this.signinObj);
+    localStorage.setItem('signinUsers',JSON.stringify(this.signinUsers));
+  }
+
 }
 
 

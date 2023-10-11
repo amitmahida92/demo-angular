@@ -11,6 +11,9 @@ import { AuthService } from 'src/app/services/auth.service';
 export class ForgotPasswordComponent {
 
 email : string = '';
+  id: string = '';
+  error = false;
+
 
   constructor(private http: HttpClient) {}
 
