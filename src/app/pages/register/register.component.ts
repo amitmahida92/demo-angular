@@ -6,15 +6,22 @@ import { CustomerCompositeService } from '@savvy/customer-composite';
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss']
 })
-export class RegisterComponent {
-  firstName = '';
-  lastName = '';
-  email = '';
-  password = '';
+export class RegisterComponent implements OnInit{
+  signupUsers: any[] = [];
+  signupObj:any = {
+  firstName : '',
+  lastName : '',
+  email : '',
+  password : ''
+  };
 
   constructor(
     private customerCompositeService: CustomerCompositeService
   ) {
+
+  }
+
+  ngOnInit(): void {
 
   }
 
