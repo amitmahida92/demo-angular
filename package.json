@@ -22,6 +22,7 @@
     "@popperjs/core": "^2.11.6",
     "@savvy/customer-composite": "^8.0.47",
     "bootstrap": "^5.2.3",
+    "bootstrap-icons": "^1.11.1",
     "ng-bootstrap-icons": "^13.1.2-canary.1",
     "rxjs": "~7.8.0",
     "swiper": "^10.2.0",

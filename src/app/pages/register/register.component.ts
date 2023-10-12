@@ -6,13 +6,13 @@ import { CustomerCompositeService } from '@savvy/customer-composite';
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss']
 })
-export class RegisterComponent implements OnInit{
+export class RegisterComponent implements OnInit {
   signupUsers: any[] = [];
-  signupObj:any = {
-  firstName : '',
-  lastName : '',
-  email : '',
-  password : ''
+  signupObj: any = {
+    firstName: '',
+    lastName: '',
+    email: '',
+    password: ''
   };
 
   constructor(
@@ -22,10 +22,22 @@ export class RegisterComponent implements OnInit{
   }
 
   ngOnInit(): void {
-
+    const localData = localStorage.getItem('signUpUsers');
+    if (localData != null) {
+      this.signupUsers = JSON.parse(localData);
+    }
   }
 
-  register() {
+  onRegister() {
+    this.signupUsers.push(this.signupObj);
+    localStorage.setItem('signUpUsers', JSON.stringify(this.signupUsers));
+    this.signupObj = {
+      firstName: '',
+      lastName: '',
+      email: '',
+      password: ''
+    };
+  }
     // this.isFormSubmitted = true;
     // if (this.form.invalid) {
     //   return;
@@ -39,5 +51,5 @@ export class RegisterComponent implements OnInit{
     //     this.toastr.error('Customer already exists', 'Error');
     //   }
     // });
-  }
+
 }
