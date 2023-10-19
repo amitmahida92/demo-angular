@@ -12,7 +12,10 @@ import { FooterComponent } from './components/footer/footer.component';
 import { FormsModule } from '@angular/forms';
 import { SelectServiceComponent } from './pages/select-service/select-service.component';
 
-import { ApiModule as CustomerCompositeModule, Configuration as CustomerCompositeConfiguration } from '@savvy/customer-composite';
+import { ApiModule as CustomerCompositeModule, Configuration as CustomerCompositeConfiguration } from '@savvy/customer';
+import { ApiModule as DatalistModule, Configuration as DatalistConfiguration } from '@savvy/datalist';
+
+
 import { ConfService } from './config.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
@@ -48,6 +51,11 @@ import { AddPetComponent } from './pages/add-pet/add-pet.component';
     HttpClientModule,
     CustomerCompositeModule.forRoot(() => {
       return new CustomerCompositeConfiguration({
+        basePath: ConfService.apiUrl()
+      });
+    }),
+    DatalistModule.forRoot(() => {
+      return new DatalistConfiguration({
         basePath: ConfService.apiUrl()
       });
     }),

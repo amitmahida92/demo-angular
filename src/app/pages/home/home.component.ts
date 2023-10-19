@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { DataItemDto, DatalistService } from '@savvy/datalist';
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -13,18 +14,32 @@ export class HomeComponent implements OnInit {
   petname: string = '';
   selectedBreed: string = '';
 
-  petBreeds: { id: string, name: string }[] = [
-    { id: '1', name: 'One' },
-    { id: '2', name: 'Two' },
-    { id: '3', name: 'Three' }
-  ];
+  petBreeds: DataItemDto[] = [];
+  contextId: string = '';
 
-  constructor(private http: HttpClient) {}
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private datalistService: DatalistService,
+
+  ) { }
 
   ngOnInit() {
-    this.http.get('/api/pets').subscribe((data: any) => {
-      this.pets = data;
+    this.activatedRoute.queryParams.subscribe(params => {
+      if (params['id']) {
+        this.contextId = params['id'];
+        this.loadBreeds();
+      }
     });
+  }
+
+  loadBreeds() {
+    if (this.contextId) {
+      this.datalistService.getDataListByName(this.contextId, 'ENV_ID', 'Breed').subscribe(res => {
+        if (res?.dataItems?.length) {
+          this.petBreeds = res?.dataItems;
+        }
+      });
+    }
   }
 
   addPet() {
