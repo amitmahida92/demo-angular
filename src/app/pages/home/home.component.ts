@@ -10,6 +10,8 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
+  isEmailRegistered: boolean = false;
+
   pets: any[] = [];
   petname: string = '';
   selectedBreed: string = '';
@@ -19,7 +21,7 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private activatedRoute: ActivatedRoute,
-    private datalistService: DatalistService,
+    private datalistService: DatalistService
 
   ) { }
 
@@ -48,8 +50,8 @@ export class HomeComponent implements OnInit {
 
   addNewPet() {
     const newPet = { name: 'New Pet', breed: 'Breed' };
-    this.http.post('/api/pets', newPet).subscribe((data: any) => {
-      this.pets.push(data);
-    });
+    // this.http.post('/api/pets', newPet).subscribe((data: any) => {
+    //   this.pets.push(data);
+    // });
   }
 }

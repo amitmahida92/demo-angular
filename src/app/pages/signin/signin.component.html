@@ -21,7 +21,7 @@
                                     placeholder="Email Address" [(ngModel)]="signinObj.email">
                                 <label for="floatingInput">Email address</label>
                             </div>
-                            <div class="invalid-feedback">
+                            <div class="invalid-feedback" *ngIf="!isEmailValid">
                                 Entered email address doesn't exist.
                             </div>
                         </div>
@@ -33,7 +33,7 @@
                                     <label for="floatingInputpassword">Password</label>
                                 </div>
                                 <span class="input-group-text bg-white"><i class="bi bi-eye-slash"></i></span>
-                                <div class="invalid-feedback">
+                                <div class="invalid-feedback" *ngIf="showErrorMessage">
                                     Entered password is incorrect
                                 </div>
                             </div>

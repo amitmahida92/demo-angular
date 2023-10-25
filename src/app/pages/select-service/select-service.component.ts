@@ -45,36 +45,14 @@ export class SelectServiceComponent implements OnInit {
   activateNextButton() {
     this.isNextButtonActive = true;
 
-}
+  }
 
-isPreviousButtonActive: boolean = false;
+  isPreviousButtonActive: boolean = false;
 
   activatePreviousButton() {
     this.isPreviousButtonActive = true;
 
-}
+  }
 
 }
 
-const addPetModal = document.getElementById('addpetmodal') as HTMLElement;
-const petNameInput = document.getElementById('petname') as HTMLInputElement;
-const breedSelect = document.getElementById('breedSelect') as HTMLSelectElement;
-const submitButton = document.querySelector('.modal-footer button') as HTMLButtonElement;
-
-const openModalButton = document.getElementById('openModalButton') as HTMLButtonElement; // You should add this button in your HTML code
-openModalButton.addEventListener('click', () => {
-  addPetModal.classList.add('show');
-});
-
-const closeModalButton = addPetModal.querySelector('.btn-close') as HTMLElement;
-closeModalButton.addEventListener('click', () => {
-  addPetModal.classList.remove('show');
-});
-
-
-submitButton.addEventListener('click', () => {
-  const petName = petNameInput.value;
-  const selectedBreed = breedSelect.value;
-
-  addPetModal.classList.remove('show');
-});
