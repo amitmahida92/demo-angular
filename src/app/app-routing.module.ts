@@ -9,6 +9,7 @@ import { ResetPasswordComponent } from './pages/reset-password/reset-password.co
 import { SelectSchedulesComponent } from './pages/select-schedules/select-schedules.component';
 import { BookingConfirmationComponent } from './pages/booking-confirmation/booking-confirmation.component';
 import { DialogComponent } from './pages/dialog/dialog.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 
 const routes: Routes = [
@@ -52,6 +53,10 @@ const routes: Routes = [
   {
     path: 'booking-confirmation',
     component: BookingConfirmationComponent
+  },
+  {
+    path: '**',
+    component: NotFoundComponent
   }
 ];
 

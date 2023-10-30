@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataItemDto, DatalistService } from '@savvy/datalist';
 import { ActivatedRoute } from '@angular/router';
+import { Pet } from '../pet.model';
 
 
 @Component({
@@ -11,13 +12,12 @@ import { ActivatedRoute } from '@angular/router';
 export class HomeComponent implements OnInit {
 
   isEmailRegistered: boolean = false;
-
-  pets: any[] = [];
+  pets: Pet[] = [];
   petname: string = '';
   selectedBreed: string = '';
-
   petBreeds: DataItemDto[] = [];
   contextId: string = '';
+  http: any;
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -50,8 +50,8 @@ export class HomeComponent implements OnInit {
 
   addNewPet() {
     const newPet = { name: 'New Pet', breed: 'Breed' };
-    // this.http.post('/api/pets', newPet).subscribe((data: any) => {
-    //   this.pets.push(data);
-    // });
+    this.http.post('/api/pets', newPet).subscribe((data: any) => {
+      this.pets.push(data);
+    });
   }
 }

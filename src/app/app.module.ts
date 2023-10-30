@@ -24,6 +24,7 @@ import { SelectSchedulesComponent } from './pages/select-schedules/select-schedu
 import { BookingConfirmationComponent } from './pages/booking-confirmation/booking-confirmation.component';
 import { DialogComponent } from './pages/dialog/dialog.component';
 import { AddPetComponent } from './pages/add-pet/add-pet.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { AddPetComponent } from './pages/add-pet/add-pet.component';
     SelectSchedulesComponent,
     BookingConfirmationComponent,
     DialogComponent,
-    AddPetComponent
+    AddPetComponent,
+    NotFoundComponent
   ],
 
   imports: [

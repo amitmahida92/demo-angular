@@ -14,7 +14,6 @@ export class SigninComponent implements OnInit {
   };
 
   isEmailValid: boolean = true;
-
   showErrorMessage: boolean = false;
 
   constructor() { }
