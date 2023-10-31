@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import Swiper from 'swiper';
 import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ModalService } from 'src/app/services/modal.service';
+import { ModelComponent } from 'src/app/model/model.component';
 
 @Component({
   selector: 'app-select-service',
@@ -9,14 +11,21 @@ import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 })
 export class SelectServiceComponent implements OnInit {
 
-  isDialogOpen = false;
+  constructor(private modalService: NgbModal) { }
 
-  openDialog() {
-    this.isDialogOpen = true;
+  openModal() {
+    const modalRef = this.modalService.open(ModelComponent);
+    modalRef.componentInstance.name = 'addpetmodal';
   }
 
-  ngOnInit() {
+  isDialogOpen = false;
 
+  // openModal() {
+  //   document.getElementById('addpetmodal')
+  //   this.isDialogOpen = true;
+  // }
+
+  ngOnInit() {
     if (window.innerWidth < 991) {
       const mySwiper = new Swiper('.petListSwiper', {
         slidesPerView: "auto",

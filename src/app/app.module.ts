@@ -25,6 +25,8 @@ import { BookingConfirmationComponent } from './pages/booking-confirmation/booki
 import { DialogComponent } from './pages/dialog/dialog.component';
 import { AddPetComponent } from './pages/add-pet/add-pet.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { MyModalComponent } from './my-modal/my-modal.component';
+import { ModelComponent } from './model/model.component';
 
 
 @NgModule({
@@ -42,7 +44,9 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
     BookingConfirmationComponent,
     DialogComponent,
     AddPetComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    MyModalComponent,
+    ModelComponent
   ],
 
   imports: [
