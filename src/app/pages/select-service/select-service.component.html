@@ -7,7 +7,7 @@
             <h4 class="my-2">Your pets</h4>
           </div>
           <div class="col-auto">
-            <button class="btn btn-link" data-bs-toggle="modal" data-bs-target="#addpetmodal" (click)="openModal()">+ Add Pet</button>
+            <button class="btn btn-link" data-bs-toggle="modal" data-bs-target="#addpetmodal" (ng-click)="openModal()">+ Add Pet</button>
             <div class="modal fade" id="addpetmodal" tabindex="-1" aria-labelledby="addpetmodalLabel" aria-hidden="true">
               <div class="modal-dialog modal-dialog-centered modal-sm">
                 <div class="modal-content">
@@ -477,7 +477,7 @@
     </div>
   </div>
 
-
+<app-add-pet></app-add-pet>
 
 <!-- add pet modal -->
 <!-- <div class="modal fade" id="addpetmodal" tabindex="-1" aria-labelledby="addpetmodalLabel" aria-hidden="true">

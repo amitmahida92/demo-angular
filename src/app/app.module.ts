@@ -9,7 +9,7 @@ import { SigninComponent } from './pages/signin/signin.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SelectServiceComponent } from './pages/select-service/select-service.component';
 
 import { ApiModule as CustomerCompositeModule, Configuration as CustomerCompositeConfiguration } from '@savvy/customer';
@@ -25,8 +25,8 @@ import { BookingConfirmationComponent } from './pages/booking-confirmation/booki
 import { DialogComponent } from './pages/dialog/dialog.component';
 import { AddPetComponent } from './pages/add-pet/add-pet.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
-import { MyModalComponent } from './my-modal/my-modal.component';
 import { ModelComponent } from './model/model.component';
+import { ModalService } from './services/modal.service';
 
 
 @NgModule({
@@ -45,7 +45,6 @@ import { ModelComponent } from './model/model.component';
     DialogComponent,
     AddPetComponent,
     NotFoundComponent,
-    MyModalComponent,
     ModelComponent
   ],
 
@@ -54,6 +53,7 @@ import { ModelComponent } from './model/model.component';
     AppRoutingModule,
     NgbModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     CustomerCompositeModule.forRoot(() => {
       return new CustomerCompositeConfiguration({
@@ -66,7 +66,7 @@ import { ModelComponent } from './model/model.component';
       });
     }),
   ],
-  providers: [],
+  providers: [ModalService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

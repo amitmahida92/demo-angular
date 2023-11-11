@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import Swiper from 'swiper';
-import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { ModalService } from 'src/app/services/modal.service';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ModelComponent } from 'src/app/model/model.component';
 
 @Component({

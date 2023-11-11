@@ -13,10 +13,13 @@ export class SigninComponent implements OnInit {
     password: ''
   };
 
-  isEmailValid: boolean = true;
-  showErrorMessage: boolean = false;
+  isEmailValid = true;
+  showErrorMessage = false;
 
-  constructor() { }
+
+  constructor() {
+
+   }
 
   ngOnInit(): void {
 
@@ -25,7 +28,13 @@ export class SigninComponent implements OnInit {
   onSignIn(){
     this.signinUsers.push(this.signinObj);
     localStorage.setItem('signinUsers',JSON.stringify(this.signinUsers));
+    if (this.isEmailValid) {
+      this.isEmailValid = true;
+  } else {
+      this.isEmailValid = false;
   }
+  }
+
 
   checkPassword(password: string) {
     const isPasswordCorrect = this.validatePassword(password);
@@ -41,6 +50,8 @@ export class SigninComponent implements OnInit {
     const correctPassword = 'yourCorrectPassword';
     return password === correctPassword;
   }
+
+
 }
 
 

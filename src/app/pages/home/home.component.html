@@ -5,7 +5,7 @@
       <p class="lead text-secondary mb-4">Your pets are in great hands with a us. Plus, your booking is backed by
         24/7 support. We will send you a confirmation with timing and reminder at the time of appointment.</p>
 
-      <a href="#" class="btn btn-lg btn-light shadow-sm">Become our Customer <i class="bi bi-arrow-right"></i></a>
+      <a routerLink="/register" class="btn btn-lg btn-light shadow-sm">Become our Customer <i class="bi bi-arrow-right"></i></a>
     </div>
     <div
       class="col-12 col-md-12 col-lg-5 col-xl-5 col-xxl-5 offset-lg-2 offset-xl-2 offset-xxl-3 order-1 order-lg-2 mb-5 mb-lg-0">
@@ -37,12 +37,12 @@
                   <option *ngFor="let breed of petBreeds" [value]="breed.name">{{ breed.label }}
                   </option>
                 </select>
-                <label for="breedSelect">Select Pet Breed</label>
+                <!-- <option value=""></option> -->
+                <label for="breedSelect">Your Pet Breed</label>
               </div>
             </div>
-            <option value="">Your Pet Breed</option>
           </div>
-          
+
           <div class="mb-3">
             <div class="form-floating is-valid">
               <input type="email" class="form-control is-valid" id="floatingInput" placeholder="name@example.com">

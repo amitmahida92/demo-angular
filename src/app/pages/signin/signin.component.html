@@ -18,7 +18,7 @@
                         <div class="mb-3">
                             <div class="form-floating is-invalid">
                                 <input type="email" class="form-control is-invalid" id="floatingInput"
-                                    placeholder="Email Address" [(ngModel)]="signinObj.email">
+                                    placeholder="Email Address" [(ngModel)]="signinObj.email" >
                                 <label for="floatingInput">Email address</label>
                             </div>
                             <div class="invalid-feedback" *ngIf="!isEmailValid">
@@ -40,7 +40,7 @@
                         </div>
 
                         <p class="text-center my-4">
-                            <a class="btn btn-lg btn-default shadow-sm ms-1 ms-md-2" (click)="onSignIn()">Sign in<i
+                            <a class="btn btn-lg btn-default shadow-sm ms-1 ms-md-2" type="submit" (click)="onSignIn()">Sign in<i
                                     class=" bi bi-arrow-right"></i></a>
                         </p>
                         <p class="text-secondary text-center px-3 px-md-4">Don't have account? <a
