@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CustomerCompositeService } from '@savvy/customer-composite';
+import { Validators } from '@angular/forms';
+// import { EnvId } from '@savvy/booking';
 
 @Component({
   selector: 'app-register',
@@ -16,8 +18,10 @@ export class RegisterComponent implements OnInit {
     email: '',
     password: ''
   };
+
   isFormSubmitted: boolean | undefined;
   form: any;
+  bookingDefinitionId = '';
   error!: string;
   toastr: any;
 
@@ -27,11 +31,31 @@ export class RegisterComponent implements OnInit {
 
   }
 
-  ngOnInit(): void {
+  password: string | undefined;
+  showPassword: boolean = false;
+  show = false;
+
+
+  ngOnInit() {
     const localData = localStorage.getItem('signUpUsers');
     if (localData != null) {
       this.signupUsers = JSON.parse(localData);
     }
+    this.password = 'password';
+  }
+
+  onClick() {
+    if (this.password === 'password') {
+      this.password = 'text';
+      this.show = true;
+    } else {
+      this.password = 'password';
+      this.show = false;
+    }
+  }
+
+  togglePasswordVisibility() {
+    this.showPassword = !this.showPassword;
   }
 
   onRegister() {
@@ -40,8 +64,8 @@ export class RegisterComponent implements OnInit {
     this.signupObj = {
       firstName: '',
       lastName: '',
-      email: '',
-      password: ''
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(8)]],
     };
   }
 

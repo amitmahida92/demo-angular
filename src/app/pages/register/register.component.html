@@ -37,8 +37,8 @@
                 [(ngModel)]="signupObj.email">
               <label for="floatingInput">Email address</label>
             </div>
-
           </div>
+
           <div class="mb-3">
             <div class="input-group ">
               <div class="form-floating">
@@ -46,14 +46,14 @@
                   [(ngModel)]="signupObj.password">
                 <label for="floatingInputpassword">Password</label>
               </div>
-              <span class="input-group-text bg-white"><i class="bi bi-eye-slash"></i></span>
+              <span class="input-group-text bg-white" (click)="togglePasswordVisibility()"> <i class="bi" [ngClass]="{ 'bi-eye': showPassword, 'bi-eye-slash': !showPassword }"></i></span>
               <div class="invalid-feedback">
                 Enter password with atlease 1 alpha
               </div>
             </div>
           </div>
-          <div>
 
+          <div>
             <p class="text-center my-4">
               <a class="btn btn-lg btn-default shadow-sm ms-1 ms-md-2" (click)="onRegister()">Register <i
                   class="bi bi-arrow-right"></i></a>
