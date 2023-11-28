@@ -1,14 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { CustomerCompositeService } from '@savvy/customer-composite';
-import { Validators } from '@angular/forms';
-// import { EnvId } from '@savvy/booking';
+import { Validators, FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss']
 })
-
 export class RegisterComponent implements OnInit {
 
   signupUsers: any[] = [];
@@ -20,21 +18,27 @@ export class RegisterComponent implements OnInit {
   };
 
   isFormSubmitted: boolean | undefined;
-  form: any;
   bookingDefinitionId = '';
   error!: string;
   toastr: any;
-
-  constructor(
-    private customerCompositeService: CustomerCompositeService
-  ) {
-
-  }
-
   password: string | undefined;
   showPassword: boolean = false;
   show = false;
 
+  form: FormGroup;
+  isValid: any;
+
+  constructor(
+    private customerCompositeService: CustomerCompositeService,
+    private fb: FormBuilder
+  ) {
+    this.form = this.fb.group({
+      firstName: ['', Validators.required],
+      lastName: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(8)]],
+    });
+  }
 
   ngOnInit() {
     const localData = localStorage.getItem('signUpUsers');
@@ -45,13 +49,8 @@ export class RegisterComponent implements OnInit {
   }
 
   onClick() {
-    if (this.password === 'password') {
-      this.password = 'text';
-      this.show = true;
-    } else {
-      this.password = 'password';
-      this.show = false;
-    }
+    this.password = (this.password === 'password') ? 'text' : 'password';
+    this.show = !this.show;
   }
 
   togglePasswordVisibility() {
@@ -64,8 +63,8 @@ export class RegisterComponent implements OnInit {
     this.signupObj = {
       firstName: '',
       lastName: '',
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(8)]],
+      email: '',
+      password: ''
     };
   }
 
@@ -75,14 +74,16 @@ export class RegisterComponent implements OnInit {
       return;
     }
 
-    this.customerCompositeService.customerRegistration(this.form.value).subscribe((res) => {
-      this.signIn();
-    }, (error: any) => {
-      if (error.status === 409) {
-        this.error = 'Customer already exists';
-        this.toastr.error('Customer already exists', 'Error');
-      }
-    });
+    this.customerCompositeService.customerRegistration(this.form.value).subscribe(
+      (res) => {
 
+      },
+      (error: any) => {
+        if (error.status === 409) {
+          this.error = 'Customer already exists';
+          this.toastr.error('Customer already exists', 'Error');
+        }
+      }
+    );
   }
 }

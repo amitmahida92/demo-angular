@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ModelComponent } from 'src/app/model/model.component';
+
 
 @Component({
   selector: 'app-add-pet',
@@ -6,5 +9,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./add-pet.component.scss']
 })
 export class AddPetComponent {
+  private modalService = inject(NgbModal);
 
+  open() {
+    const modalRef = this.modalService.open(ModelComponent);
+    modalRef.componentInstance.name = 'addpetmodal';
+  }
 }

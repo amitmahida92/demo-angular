@@ -32,12 +32,16 @@
           </div>
 
           <div class="mb-3">
-            <div class="form-floating is-valid">
-              <input type="email" class="form-control is-valid" id="floatingInput" placeholder="Email Address" value=""
-                [(ngModel)]="signupObj.email">
+            <div class="form-floating" [ngClass]="{'is-valid': isValid, 'is-invalid': !isValid}">
+              <input type="email" class="form-control" id="floatingInput" placeholder="Email Address"
+                     [(ngModel)]="signupObj.email" name="email" #email="ngModel">
               <label for="floatingInput">Email address</label>
+              <div *ngIf="!email.valid && email.touched" class="invalid-feedback">
+                Please enter a valid email address.
+              </div>
             </div>
           </div>
+
 
           <div class="mb-3">
             <div class="input-group ">

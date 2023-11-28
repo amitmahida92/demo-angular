@@ -27,6 +27,7 @@ import { AddPetComponent } from './pages/add-pet/add-pet.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { ModelComponent } from './model/model.component';
 import { ModalService } from './services/modal.service';
+import { BookingStateService } from './services/booking-state.service'
 
 
 @NgModule({
@@ -66,7 +67,7 @@ import { ModalService } from './services/modal.service';
       });
     }),
   ],
-  providers: [ModalService],
+  providers: [ModalService, BookingStateService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

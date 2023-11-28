@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import Swiper from 'swiper';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { ModelComponent } from 'src/app/model/model.component';
 
 @Component({
@@ -9,20 +9,15 @@ import { ModelComponent } from 'src/app/model/model.component';
   styleUrls: ['./select-service.component.scss']
 })
 export class SelectServiceComponent implements OnInit {
+  private modalService = inject(NgbModal);
+  activeModal = inject(NgbActiveModal);
 
-  constructor(private modalService: NgbModal) { }
+  constructor() { }
 
-  openModal() {
+  open() {
     const modalRef = this.modalService.open(ModelComponent);
     modalRef.componentInstance.name = 'addpetmodal';
   }
-
-  isDialogOpen = false;
-
-  // openModal() {
-  //   document.getElementById('addpetmodal')
-  //   this.isDialogOpen = true;
-  // }
 
   ngOnInit() {
     if (window.innerWidth < 991) {

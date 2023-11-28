@@ -30,9 +30,10 @@
                 <div *ngIf="!petname && petname !== ''">Pet Name is required.</div>
               </div>
             </div>
+
             <div class="col-12 col-sm-6 mb-3">
               <div class="form-floating">
-                <select class="form-select" id="breedSelect" aria-label="Select Pet Breed" [(ngModel)]="selectedBreed">
+                <select class="form-select" id="breedSelect" placeholder="Select Pet Breed" [(ngModel)]="selectedBreed">
                   <option value="">Select Your Pet Breed</option>
                   <option *ngFor="let breed of petBreeds" [value]="breed.name">{{ breed.label }}
                   </option>
@@ -42,6 +43,7 @@
               </div>
             </div>
           </div>
+
 
           <div class="mb-3">
             <div class="form-floating is-valid">
