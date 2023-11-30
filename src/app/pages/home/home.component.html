@@ -5,7 +5,8 @@
       <p class="lead text-secondary mb-4">Your pets are in great hands with a us. Plus, your booking is backed by
         24/7 support. We will send you a confirmation with timing and reminder at the time of appointment.</p>
 
-      <a routerLink="/register" class="btn btn-lg btn-light shadow-sm">Become our Customer <i class="bi bi-arrow-right"></i></a>
+      <a routerLink="/register" class="btn btn-lg btn-light shadow-sm">Become our Customer <i
+          class="bi bi-arrow-right"></i></a>
     </div>
     <div
       class="col-12 col-md-12 col-lg-5 col-xl-5 col-xxl-5 offset-lg-2 offset-xl-2 offset-xxl-3 order-1 order-lg-2 mb-5 mb-lg-0">
@@ -33,17 +34,15 @@
 
             <div class="col-12 col-sm-6 mb-3">
               <div class="form-floating">
-                <select class="form-select" id="breedSelect" placeholder="Select Pet Breed" [(ngModel)]="selectedBreed">
-                  <option value="">Select Your Pet Breed</option>
-                  <option *ngFor="let breed of petBreeds" [value]="breed.name">{{ breed.label }}
-                  </option>
+                <select class="form-select" id="breedSelect" placeholder="Select Pet Breed" [(ngModel)]="loadBreeds"
+                  aria-label="Select Pet Breed">
+                  <option>Your Pet Breed</option>
                 </select>
-                <!-- <option value=""></option> -->
-                <label for="breedSelect">Your Pet Breed</label>
+                <label for="breedSelect">Select Pet Breed</label>
+                <option *ngFor="let breed of petBreeds" [value]="breed.name">{{ breed.label }}</option>
               </div>
             </div>
           </div>
-
 
           <div class="mb-3">
             <div class="form-floating is-valid">
@@ -57,7 +56,8 @@
           </div>
 
           <p class="text-center my-4">
-            <a routerLink="/select-service" class="btn btn-lg btn-default shadow-sm ms-1 ms-md-2" type="submit">Start scheduling <i class=" bi bi-arrow-right"></i></a>
+            <a routerLink="/select-service" class="btn btn-lg btn-default shadow-sm ms-1 ms-md-2" type="submit">Start
+              scheduling <i class=" bi bi-arrow-right"></i></a>
           </p>
           <p class="text-secondary text-center px-3 px-md-4">If you are already our customer, retrieve pet
             list by <a routerLink="/signin">Sign in</a> here.</p>

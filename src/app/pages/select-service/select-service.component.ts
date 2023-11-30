@@ -10,13 +10,13 @@ import { ModelComponent } from 'src/app/model/model.component';
 })
 export class SelectServiceComponent implements OnInit {
   private modalService = inject(NgbModal);
-  activeModal = inject(NgbActiveModal);
+  // activeModal = inject(NgbActiveModal);
 
   constructor() { }
 
   open() {
     const modalRef = this.modalService.open(ModelComponent);
-    modalRef.componentInstance.name = 'addpetmodal';
+    modalRef.componentInstance.name = 'ModelComponent';
   }
 
   ngOnInit() {
