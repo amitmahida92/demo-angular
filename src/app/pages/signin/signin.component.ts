@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./signin.component.scss']
 })
 export class SigninComponent implements OnInit {
+togglePasswordVisibility() {
+throw new Error('Method not implemented.');
+}
 
   signinUsers: any[] = [];
   signinObj: any = {
@@ -15,24 +18,25 @@ export class SigninComponent implements OnInit {
 
   isEmailValid = true;
   showErrorMessage = false;
+  showPassword: any;
 
 
   constructor() {
 
-   }
+  }
 
   ngOnInit(): void {
 
   }
 
-  onSignIn(){
+  onSignIn() {
     this.signinUsers.push(this.signinObj);
-    localStorage.setItem('signinUsers',JSON.stringify(this.signinUsers));
+    localStorage.setItem('signinUsers', JSON.stringify(this.signinUsers));
     if (this.isEmailValid) {
       this.isEmailValid = true;
-  } else {
+    } else {
       this.isEmailValid = false;
-  }
+    }
   }
 
 

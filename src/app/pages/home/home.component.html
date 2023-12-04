@@ -34,19 +34,18 @@
 
             <div class="col-12 col-sm-6 mb-3">
               <div class="form-floating">
-                <select class="form-select" id="breedSelect" placeholder="Select Pet Breed" [(ngModel)]="loadBreeds"
-                  aria-label="Select Pet Breed">
+                <select class="form-select" id="breedSelect" name="petBreed" aria-label="Select Pet Breed" [(ngModel)]="selectedBreed">
                   <option>Your Pet Breed</option>
+                  <option *ngFor="let breed of petBreeds" [value]="breed.name">{{ breed.name }}</option>
                 </select>
                 <label for="breedSelect">Select Pet Breed</label>
-                <option *ngFor="let breed of petBreeds" [value]="breed.name">{{ breed.label }}</option>
               </div>
             </div>
           </div>
 
           <div class="mb-3">
-            <div class="form-floating is-valid">
-              <input type="email" class="form-control is-valid" id="floatingInput" placeholder="name@example.com">
+            <div class="form-floating">
+              <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
               <label for="floatingInput">Email address</label>
             </div>
             <div class="valid-feedback text-success" *ngIf="isEmailRegistered">
