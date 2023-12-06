@@ -6,9 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./signin.component.scss']
 })
 export class SigninComponent implements OnInit {
-togglePasswordVisibility() {
-throw new Error('Method not implemented.');
-}
 
   signinUsers: any[] = [];
   signinObj: any = {
@@ -55,6 +52,9 @@ throw new Error('Method not implemented.');
     return password === correctPassword;
   }
 
+  togglePasswordVisibility() {
+    this.showPassword = !this.showPassword;
+  }
 
 }
 

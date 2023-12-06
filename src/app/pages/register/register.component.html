@@ -34,7 +34,7 @@
           <div class="mb-3">
             <div class="form-floating" [ngClass]="{'is-valid': isValid, 'is-invalid': !isValid}">
               <input type="email" class="form-control" id="floatingInput" placeholder="Email Address"
-                     [(ngModel)]="signupObj.email" name="email" #email="ngModel">
+                     [(ngModel)]="signupObj.email" name="email" autocomplete="name" #email="ngModel">
               <label for="floatingInput">Email address</label>
               <div *ngIf="!email.valid && email.touched" class="invalid-feedback">
                 Please enter a valid email address.
@@ -42,11 +42,10 @@
             </div>
           </div>
 
-
           <div class="mb-3">
             <div class="input-group ">
               <div class="form-floating">
-                <input type="password" class="form-control" id="floatingInputpassword" placeholder="Password"
+                <input type="password" class="form-control" id="floatingInputpassword" placeholder="Password" autocomplete="new-password"
                   [(ngModel)]="signupObj.password">
                 <label for="floatingInputpassword">Password</label>
               </div>

@@ -32,7 +32,7 @@
                                         placeholder="Password" [(ngModel)]="signinObj.password">
                                     <label for="floatingInputpassword">Password</label>
                                 </div>
-                                <span class="input-group-text bg-white" (click)="togglePasswordVisibility()"><i class="bi" [ngClass]="{ 'bi-eye': showPassword, 'bi-eye-slash': !showPassword }"></i></span>
+                                <span class="input-group-text bg-white" (click)="togglePasswordVisibility()"> <i class="bi" [ngClass]="{ 'bi-eye': showPassword, 'bi-eye-slash': !showPassword }"></i></span>
                                 <div class="invalid-feedback" *ngIf="showErrorMessage">
                                     Entered password is incorrect
                                 </div>
