@@ -55,6 +55,10 @@ const routes: Routes = [
     component: BookingConfirmationComponent
   },
   {
+    path: 'home',
+    loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
+  },
+  {
     path: '**',
     component: NotFoundComponent
   }

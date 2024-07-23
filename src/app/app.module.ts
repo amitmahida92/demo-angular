@@ -1,3 +1,4 @@
+import { HomeModule } from './home.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -50,6 +51,7 @@ import { BookingStateService } from './services/booking-state.service'
   ],
 
   imports: [
+    HomeModule,
     BrowserModule,
     AppRoutingModule,
     NgbModule,
