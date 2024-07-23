@@ -18,7 +18,7 @@ import { ApiModule as DatalistModule, Configuration as DatalistConfiguration } f
 
 
 import { ConfService } from './config.service';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
 import { ResetPasswordComponent } from './pages/reset-password/reset-password.component';
 import { SelectSchedulesComponent } from './pages/select-schedules/select-schedules.component';
@@ -31,45 +31,37 @@ import { ModalService } from './services/modal.service';
 import { BookingStateService } from './services/booking-state.service'
 
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    SigninComponent,
-    RegisterComponent,
-    HeaderComponent,
-    FooterComponent,
-    SelectServiceComponent,
-    ForgotPasswordComponent,
-    ResetPasswordComponent,
-    SelectSchedulesComponent,
-    BookingConfirmationComponent,
-    DialogComponent,
-    AddPetComponent,
-    NotFoundComponent,
-    ModelComponent
-  ],
-
-  imports: [
-    HomeModule,
-    BrowserModule,
-    AppRoutingModule,
-    NgbModule,
-    FormsModule,
-    ReactiveFormsModule,
-    HttpClientModule,
-    CustomerCompositeModule.forRoot(() => {
-      return new CustomerCompositeConfiguration({
-        basePath: ConfService.apiUrl()
-      });
-    }),
-    DatalistModule.forRoot(() => {
-      return new DatalistConfiguration({
-        basePath: ConfService.apiUrl()
-      });
-    }),
-  ],
-  providers: [ModalService, BookingStateService],
-  bootstrap: [AppComponent]
-})
+@NgModule({ declarations: [
+        AppComponent,
+        HomeComponent,
+        SigninComponent,
+        RegisterComponent,
+        HeaderComponent,
+        FooterComponent,
+        SelectServiceComponent,
+        ForgotPasswordComponent,
+        ResetPasswordComponent,
+        SelectSchedulesComponent,
+        BookingConfirmationComponent,
+        DialogComponent,
+        AddPetComponent,
+        NotFoundComponent,
+        ModelComponent
+    ],
+    bootstrap: [AppComponent], imports: [HomeModule,
+        BrowserModule,
+        AppRoutingModule,
+        NgbModule,
+        FormsModule,
+        ReactiveFormsModule,
+        CustomerCompositeModule.forRoot(() => {
+            return new CustomerCompositeConfiguration({
+                basePath: ConfService.apiUrl()
+            });
+        }),
+        DatalistModule.forRoot(() => {
+            return new DatalistConfiguration({
+                basePath: ConfService.apiUrl()
+            });
+        })], providers: [ModalService, BookingStateService, provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule { }
