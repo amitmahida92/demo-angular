@@ -3,7 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: true,
+  production: false,
   WEBSOCKET_URL: 'wss://devapi.itsallsavvy.com',
   API_URL: 'https://devapi.itsallsavvy.com',
   API_HOST: 'devapi.itsallsavvy.com',

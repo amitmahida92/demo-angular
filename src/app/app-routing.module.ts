@@ -1,15 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './pages/home/home.component';
-import { SigninComponent } from './pages/signin/signin.component';
-import { RegisterComponent } from './pages/register/register.component';
-import { SelectServiceComponent } from './pages/select-service/select-service.component';
-import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
-import { ResetPasswordComponent } from './pages/reset-password/reset-password.component';
-import { SelectSchedulesComponent } from './pages/select-schedules/select-schedules.component';
 import { BookingConfirmationComponent } from './pages/booking-confirmation/booking-confirmation.component';
 import { DialogComponent } from './pages/dialog/dialog.component';
+import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { RegisterComponent } from './pages/register/register.component';
+import { ResetPasswordComponent } from './pages/reset-password/reset-password.component';
+import { SelectSchedulesComponent } from './pages/select-schedules/select-schedules.component';
+import { SelectServiceComponent } from './pages/select-service/select-service.component';
+import { SigninComponent } from './pages/signin/signin.component';
 
 
 const routes: Routes = [
@@ -18,10 +17,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full',
   },
-  {
-    path: 'home',
-    component: HomeComponent
-  },
+  // {
+  //   path: 'home',
+  //   component: HomeComponent
+  // },
   {
     path: 'signin',
     component: SigninComponent
