@@ -1,0 +1,10 @@
+<div appFileUpload (fileDropped)="onFileDropped($event)">
+  <p>Drag and drop files here</p>
+  <input type="file" (change)="onFileSelected($event)" multiple>
+</div>
+
+<button (click)="uploadFiles()">Upload</button>
+
+<img *ngFor="let item of stream | async as list" src="" alt="" srcset="">
+
+
