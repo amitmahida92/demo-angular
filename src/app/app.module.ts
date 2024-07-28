@@ -1,4 +1,3 @@
-import { HomeModule } from './home.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -31,37 +30,39 @@ import { ModalService } from './services/modal.service';
 import { BookingStateService } from './services/booking-state.service'
 
 
-@NgModule({ declarations: [
-        AppComponent,
-        HomeComponent,
-        SigninComponent,
-        RegisterComponent,
-        HeaderComponent,
-        FooterComponent,
-        SelectServiceComponent,
-        ForgotPasswordComponent,
-        ResetPasswordComponent,
-        SelectSchedulesComponent,
-        BookingConfirmationComponent,
-        DialogComponent,
-        AddPetComponent,
-        NotFoundComponent,
-        ModelComponent
-    ],
-    bootstrap: [AppComponent], imports: [HomeModule,
-        BrowserModule,
-        AppRoutingModule,
-        NgbModule,
-        FormsModule,
-        ReactiveFormsModule,
-        CustomerCompositeModule.forRoot(() => {
-            return new CustomerCompositeConfiguration({
-                basePath: ConfService.apiUrl()
-            });
-        }),
-        DatalistModule.forRoot(() => {
-            return new DatalistConfiguration({
-                basePath: ConfService.apiUrl()
-            });
-        })], providers: [ModalService, BookingStateService, provideHttpClient(withInterceptorsFromDi())] })
+@NgModule({
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    SigninComponent,
+    RegisterComponent,
+    HeaderComponent,
+    FooterComponent,
+    SelectServiceComponent,
+    ForgotPasswordComponent,
+    ResetPasswordComponent,
+    SelectSchedulesComponent,
+    BookingConfirmationComponent,
+    DialogComponent,
+    AddPetComponent,
+    NotFoundComponent,
+    ModelComponent
+  ],
+  bootstrap: [AppComponent], imports: [
+    BrowserModule,
+    AppRoutingModule,
+    NgbModule,
+    FormsModule,
+    ReactiveFormsModule,
+    CustomerCompositeModule.forRoot(() => {
+      return new CustomerCompositeConfiguration({
+        basePath: ConfService.apiUrl()
+      });
+    }),
+    DatalistModule.forRoot(() => {
+      return new DatalistConfiguration({
+        basePath: ConfService.apiUrl()
+      });
+    })], providers: [ModalService, BookingStateService, provideHttpClient(withInterceptorsFromDi())]
+})
 export class AppModule { }
